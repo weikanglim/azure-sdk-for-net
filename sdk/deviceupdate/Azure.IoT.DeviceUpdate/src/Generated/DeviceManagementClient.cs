@@ -2204,58 +2204,6 @@ namespace Azure.IoT.DeviceUpdate
         }
 
         /// <summary>
-        /// [Protocol Method] Get a list of all device import operations. Completed operations are kept for 7
-        /// days before auto-deleted.
-        /// <list type="bullet">
-        /// <item>
-        /// <description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description>
-        /// </item>
-        /// </list>
-        /// </summary>
-        /// <param name="filter">
-        /// Restricts the set of operations returned. Only one specific filter is
-        /// supported: "status eq 'NotStarted' or status eq 'Running'"
-        /// </param>
-        /// <param name="maxCount">
-        /// Specifies a non-negative integer n that limits the number of items returned
-        /// from a collection. The service returns the number of available items up to but
-        /// not greater than the specified value n.
-        /// </param>
-        /// <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
-        /// <returns> The response returned from the service. </returns>
-        public virtual Pageable<BinaryData> GetOperationStatuses(string filter = default, int? maxCount = default, RequestContext context = null)
-        {
-            return new DeviceManagementClientGetOperationStatusesCollectionResult(this, filter, maxCount, context, "DeviceManagementClient.GetOperationStatuses");
-        }
-
-        /// <summary>
-        /// [Protocol Method] Get a list of all device import operations. Completed operations are kept for 7
-        /// days before auto-deleted.
-        /// <list type="bullet">
-        /// <item>
-        /// <description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description>
-        /// </item>
-        /// </list>
-        /// </summary>
-        /// <param name="filter">
-        /// Restricts the set of operations returned. Only one specific filter is
-        /// supported: "status eq 'NotStarted' or status eq 'Running'"
-        /// </param>
-        /// <param name="maxCount">
-        /// Specifies a non-negative integer n that limits the number of items returned
-        /// from a collection. The service returns the number of available items up to but
-        /// not greater than the specified value n.
-        /// </param>
-        /// <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
-        /// <returns> The response returned from the service. </returns>
-        public virtual AsyncPageable<BinaryData> GetOperationStatusesAsync(string filter = default, int? maxCount = default, RequestContext context = null)
-        {
-            return new DeviceManagementClientGetOperationStatusesAsyncCollectionResult(this, filter, maxCount, context, "DeviceManagementClient.GetOperationStatuses");
-        }
-
-        /// <summary>
         /// [Protocol Method] Start the device diagnostics log collection on specified devices.
         /// <list type="bullet">
         /// <item>
