@@ -216,6 +216,16 @@ namespace Azure.Generator.Provisioning.Tests
         }
 
         [Test]
+        public void UnreachableOrdinaryDerivedModelIsNotCreated()
+        {
+            var input = CreateDerivedModel("UnreachableModel", null, _regularModel);
+
+            var provider = _factory.CreateModel(input);
+
+            Assert.That(provider, Is.Null);
+        }
+
+        [Test]
         public void DiscriminatedBaseModelDescriptionListsDerivedModels()
         {
             var discriminator = CreateProperty("kind", InputPrimitiveType.String, isDiscriminator: true);
