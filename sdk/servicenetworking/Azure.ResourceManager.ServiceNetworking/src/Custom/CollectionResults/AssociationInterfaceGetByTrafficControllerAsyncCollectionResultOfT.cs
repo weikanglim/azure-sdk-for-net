@@ -2,8 +2,6 @@
 // Licensed under the MIT License.
 
 #nullable disable
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

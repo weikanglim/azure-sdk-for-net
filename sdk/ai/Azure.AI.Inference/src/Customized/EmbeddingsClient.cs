@@ -17,7 +17,6 @@ namespace Azure.AI.Inference
 
     /// <summary> The Embeddings service client. </summary>
 
-    [SuppressMessage("Azure Analysis", "AZC0007", Justification = "Analyzer is incorrectly flagging valid overloads.")]
     [CodeGenSuppress("Embed", typeof(EmbeddingsOptions), typeof(ExtraParameters?), typeof(CancellationToken))]
     [CodeGenSuppress("EmbedAsync", typeof(EmbeddingsOptions), typeof(ExtraParameters?), typeof(CancellationToken))]
     public partial class EmbeddingsClient

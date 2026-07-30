@@ -1,0 +1,7 @@
+# Azure.ResourceManager.Chaos approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These members retain obsolete types and calls solely to preserve compatibility
+# with the prior Chaos resource surface while directing users to replacements.
+nowarn:CS0618 F:Azure.ResourceManager.Chaos.ChaosCapabilityTypeResource._data
+nowarn:CS0618 M:Azure.ResourceManager.Chaos.MockableChaosSubscriptionResource.GetChaosTargetType(System.String,System.String,System.Threading.CancellationToken)

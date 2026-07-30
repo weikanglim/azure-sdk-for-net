@@ -10,7 +10,6 @@ using Azure.ResourceManager.ServiceNetworking.Mocking;
 
 namespace Azure.ResourceManager.ServiceNetworking
 {
-#pragma warning disable 0618
     /// <summary> A class to add extension methods to Azure.ResourceManager.ServiceNetworking. </summary>
     public static partial class ServiceNetworkingExtensions
     {
@@ -56,5 +55,4 @@ namespace Azure.ResourceManager.ServiceNetworking
             return GetMockableServiceNetworkingArmClient(client).GetFrontendResource(id);
         }
     }
-#pragma warning restore 0618
 }

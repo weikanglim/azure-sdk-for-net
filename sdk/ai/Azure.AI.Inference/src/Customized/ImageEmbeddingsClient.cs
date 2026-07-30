@@ -15,7 +15,6 @@ using Azure.Core.Pipeline;
 
 namespace Azure.AI.Inference
 {
-    [SuppressMessage("Azure Analysis", "AZC0007", Justification = "Analyzer is incorrectly flagging valid overloads.")]
     [CodeGenSuppress("Embed", typeof(ImageEmbeddingsOptions), typeof(ExtraParameters?), typeof(CancellationToken))]
     [CodeGenSuppress("EmbedAsync", typeof(ImageEmbeddingsOptions), typeof(ExtraParameters?), typeof(CancellationToken))]
     public partial class ImageEmbeddingsClient

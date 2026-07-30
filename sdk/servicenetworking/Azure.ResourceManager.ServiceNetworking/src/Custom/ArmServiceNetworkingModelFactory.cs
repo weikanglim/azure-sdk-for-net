@@ -13,7 +13,6 @@ using Azure.ResourceManager.Resources.Models;
 
 namespace Azure.ResourceManager.ServiceNetworking.Models
 {
-#pragma warning disable 0618
     /// <summary> Model factory for models. </summary>
     public static partial class ArmServiceNetworkingModelFactory
     {
@@ -183,5 +182,4 @@ namespace Azure.ResourceManager.ServiceNetworking.Models
                 additionalBinaryDataProperties: null);
         }
     }
-#pragma warning restore 0618
 }

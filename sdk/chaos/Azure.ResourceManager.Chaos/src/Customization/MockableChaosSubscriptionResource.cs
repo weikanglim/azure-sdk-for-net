@@ -65,9 +65,7 @@ namespace Azure.ResourceManager.Chaos.Mocking
         [Obsolete("This method no longer works in all API versions.", false)]
         public virtual Response<ChaosTargetTypeResource> GetChaosTargetType(string locationName, string targetTypeName, CancellationToken cancellationToken = default)
         {
-#pragma warning disable CS0618 // Type or member is obsolete
             return GetChaosTargetTypes(locationName).Get(targetTypeName, cancellationToken);
-#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>

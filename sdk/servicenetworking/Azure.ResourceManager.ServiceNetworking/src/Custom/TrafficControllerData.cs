@@ -17,12 +17,10 @@ namespace Azure.ResourceManager.ServiceNetworking
     /// </summary>
     public partial class TrafficControllerData : TrackedResourceData
     {
-#pragma warning disable 0618
         /// <summary> The status of the last operation. </summary>
         [Obsolete("This property is now deprecated. Please use `TrafficControllerProvisioningState` moving forward.")]
         [EditorBrowsable(EditorBrowsableState.Never)]
         public ProvisioningState? ProvisioningState => TrafficControllerProvisioningState.ToString();
-#pragma warning restore 0618
 
         /// <summary> Gets or sets Id. </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]

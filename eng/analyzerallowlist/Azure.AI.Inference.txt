@@ -1,0 +1,13 @@
+# Azure.AI.Inference approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# The generated convenience overloads and handwritten overloads are both valid;
+# the analyzer cannot distinguish their intentional parameter differences.
+nowarn:AZC0007 T:Azure.AI.Inference.ChatCompletionsClient
+nowarn:AZC0007 T:Azure.AI.Inference.EmbeddingsClient
+nowarn:AZC0007 T:Azure.AI.Inference.ImageEmbeddingsClient
+
+# Streaming methods return the streaming wrapper required for incremental results,
+# rather than the conventional response type expected by the analyzer.
+nowarn:AZC0015 M:Azure.AI.Inference.ChatCompletionsClient.CompleteStreamingAsync(Azure.AI.Inference.ChatCompletionsOptions,System.Threading.CancellationToken)
+nowarn:AZC0015 M:Azure.AI.Inference.ChatCompletionsClient.CompleteStreaming(Azure.AI.Inference.ChatCompletionsOptions,System.Threading.CancellationToken)

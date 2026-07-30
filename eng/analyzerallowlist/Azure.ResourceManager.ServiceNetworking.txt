@@ -1,0 +1,12 @@
+# Azure.ResourceManager.ServiceNetworking approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These compatibility shims intentionally use obsolete service-networking models
+# and operations to preserve the prior public API while forwarding to replacements.
+nowarn:CS0618 T:Azure.ResourceManager.ServiceNetworking.TrafficControllerResource
+nowarn:CS0618 T:Azure.ResourceManager.ServiceNetworking.Models.ArmServiceNetworkingModelFactory
+nowarn:CS0618 P:Azure.ResourceManager.ServiceNetworking.TrafficControllerData.ProvisioningState
+nowarn:CS0618 T:Azure.ResourceManager.ServiceNetworking.AssociationInterfaceGetByTrafficControllerCollectionResultOfT
+nowarn:CS0618 T:Azure.ResourceManager.ServiceNetworking.AssociationInterfaceGetByTrafficControllerAsyncCollectionResultOfT
+nowarn:CS0618 T:Azure.ResourceManager.ServiceNetworking.ServiceNetworkingExtensions
+nowarn:CS0618 T:Azure.ResourceManager.ServiceNetworking.Mocking.MockableServiceNetworkingArmClient

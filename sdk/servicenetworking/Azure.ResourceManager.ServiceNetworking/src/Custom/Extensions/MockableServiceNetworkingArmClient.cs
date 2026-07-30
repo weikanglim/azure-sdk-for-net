@@ -9,7 +9,6 @@ using Azure.Core;
 
 namespace Azure.ResourceManager.ServiceNetworking.Mocking
 {
-#pragma warning disable 0618
     /// <summary> A class to add extension methods to ArmClient. </summary>
     public partial class MockableServiceNetworkingArmClient : ArmResource
     {
@@ -41,5 +40,4 @@ namespace Azure.ResourceManager.ServiceNetworking.Mocking
             return new FrontendResource(Client, id);
         }
     }
-#pragma warning restore 0618
 }

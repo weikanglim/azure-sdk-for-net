@@ -33,9 +33,7 @@ namespace Azure.ResourceManager.Chaos
 
         private readonly ClientDiagnostics _chaosCapabilityTypeCapabilityTypesClientDiagnostics;
         private readonly CapabilityTypes _chaosCapabilityTypeCapabilityTypesRestClient;
-#pragma warning disable CS0618 // Type or member is obsolete
         private readonly ChaosCapabilityTypeData _data;
-#pragma warning restore CS0618 // Type or member is obsolete
 
         /// <summary> Gets the resource type for the operations. </summary>
         public static readonly ResourceType ResourceType = "Microsoft.Chaos/locations/targetTypes/capabilityTypes";

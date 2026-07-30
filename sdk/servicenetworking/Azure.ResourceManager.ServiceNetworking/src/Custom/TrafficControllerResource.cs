@@ -12,7 +12,6 @@ using Azure.ResourceManager.Resources;
 
 namespace Azure.ResourceManager.ServiceNetworking
 {
-#pragma warning disable 0618
     /// <summary>
     /// A Class representing a TrafficController along with the instance operations that can be performed on it.
     /// If you have a <see cref="ResourceIdentifier"/> you can construct a <see cref="TrafficControllerResource"/>
@@ -171,5 +170,4 @@ namespace Azure.ResourceManager.ServiceNetworking
             return GetFrontends().Get(frontendName, cancellationToken);
         }
     }
-#pragma warning restore 0618
 }

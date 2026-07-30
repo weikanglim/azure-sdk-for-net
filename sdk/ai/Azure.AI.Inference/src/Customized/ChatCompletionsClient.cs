@@ -18,7 +18,6 @@ namespace Azure.AI.Inference
 
     /// <summary> The ChatCompletions service client. </summary>
 
-    [SuppressMessage("Azure Analysis", "AZC0007", Justification = "Analyzer is incorrectly flagging valid overloads.")]
     [CodeGenSuppress("Complete", typeof(ChatCompletionsOptions), typeof(ExtraParameters?), typeof(CancellationToken))]
     [CodeGenSuppress("CompleteAsync", typeof(ChatCompletionsOptions), typeof(ExtraParameters?), typeof(CancellationToken))]
     public partial class ChatCompletionsClient
@@ -151,7 +150,6 @@ namespace Azure.AI.Inference
         /// A response that, if the request was successful, may be asynchronously enumerated for
         /// <see cref="StreamingChatCompletionsUpdate"/> instances.
         /// </returns>
-        [SuppressMessage("Usage", "AZC0015:Unexpected client method return type.")]
         public virtual async Task<StreamingResponse<StreamingChatCompletionsUpdate>> CompleteStreamingAsync(
             ChatCompletionsOptions chatCompletionsOptions,
             CancellationToken cancellationToken = default)
@@ -209,7 +207,6 @@ namespace Azure.AI.Inference
         ///     <paramref name="chatCompletionsOptions.DeploymentName"/> is an empty string.
         /// </exception>
         /// <returns> The response returned from the service. </returns>
-        [SuppressMessage("Usage", "AZC0015:Unexpected client method return type.")]
         public virtual StreamingResponse<StreamingChatCompletionsUpdate> CompleteStreaming(
             ChatCompletionsOptions chatCompletionsOptions,
             CancellationToken cancellationToken = default)
