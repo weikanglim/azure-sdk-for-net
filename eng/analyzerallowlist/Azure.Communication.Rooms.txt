@@ -1,0 +1,7 @@
+# Azure.Communication.Rooms approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# RoomsClient retains its established connection-string and credential
+# constructor families; adding the constructor shape requested by AZC0007
+# would create an ambiguous or incomplete connection path.
+nowarn:AZC0007 T:Azure.Communication.Rooms.RoomsClient

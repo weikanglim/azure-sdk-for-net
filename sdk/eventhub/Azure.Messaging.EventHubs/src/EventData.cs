@@ -22,7 +22,6 @@ namespace Azure.Messaging.EventHubs
     ///   An Event Hubs event, encapsulating a set of data and its associated metadata.
     /// </summary>
     ///
-    [SuppressMessage("Usage", "AZC0034:Type name 'EventData' conflicts with 'EventData (from Azure.Storage.Blobs)'. Consider renaming to 'EventHubsEventDataClient' or 'EventHubsEventDataService' to avoid confusion.", Justification = "Existing name with a stable release.")]
     public class EventData : MessageContent
     {
         /// <summary>The AMQP representation of the event, allowing access to additional protocol data elements not used directly by the Event Hubs client library.</summary>

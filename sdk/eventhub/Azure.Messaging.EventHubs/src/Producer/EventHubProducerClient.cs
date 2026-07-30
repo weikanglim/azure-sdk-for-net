@@ -59,7 +59,6 @@ namespace Azure.Messaging.EventHubs.Producer
     /// <seealso cref="EventHubBufferedProducerClient" />
     /// <seealso href="https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/eventhub/Azure.Messaging.EventHubs/samples">Event Hubs samples and discussion</seealso>
     ///
-    [SuppressMessage("Usage", "AZC0007:DO provide a minimal constructor that takes only the parameters required to connect to the service.", Justification = "Event Hubs are AMQP-based services and don't use ClientOptions functionality")]
     public class EventHubProducerClient : IAsyncDisposable
     {
         /// <summary>The maximum number of attempts that may be made to get a <see cref="TransportProducer" /> from the pool.</summary>

@@ -1,0 +1,10 @@
+# Azure.Messaging.ServiceBus approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# QueueProperties is an established GA administration model; renaming it to
+# avoid the Storage Queues model would be a breaking API change.
+nowarn:AZC0034 T:Azure.Messaging.ServiceBus.Administration.QueueProperties
+
+# Service Bus is AMQP-based and is exempt from HTTP-based return types throughout
+# its client surface.
+nowarn:AZC0015

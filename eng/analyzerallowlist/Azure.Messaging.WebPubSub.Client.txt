@@ -1,0 +1,7 @@
+# Azure.Messaging.WebPubSub.Client approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# WebPubSubClient is a persistent WebSocket client rather than an HTTP client,
+# so HTTP ClientOptions and response-type guidance do not apply to its API surface.
+nowarn:AZC0007 T:Azure.Messaging.WebPubSub.Clients.WebPubSubClient
+nowarn:AZC0015 T:Azure.Messaging.WebPubSub.Clients.WebPubSubClient

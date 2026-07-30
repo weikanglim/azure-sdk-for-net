@@ -21,9 +21,7 @@ namespace Azure.Messaging.WebPubSub.Clients
     /// <summary>
     /// The WebPubSubService PubSub client.
     /// </summary>
-    [SuppressMessage("Usage", "AZC0007:DO provide a minimal constructor that takes only the parameters required to connect to the service.", Justification = "WebPubSub clients are Websocket based and don't use ClientOptions functionality")]
     [SuppressMessage("Usage", "AZC0004:DO provide both asynchronous and synchronous variants for all service methods.", Justification = "Synchronous methods doesn't make sense in the scenario of WebPubSub client")]
-    [SuppressMessage("Usage", "AZC0015:Unexpected client method return type.", Justification = "WebPubSubClient is not a HTTP-based client.")]
     [SuppressMessage("Design", "CA1001:Types that own disposable fields should be disposable", Justification = "We don't want user to use client within a using block")]
     public class WebPubSubClient
     {

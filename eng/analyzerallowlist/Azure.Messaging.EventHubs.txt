@@ -1,0 +1,17 @@
+# Azure.Messaging.EventHubs approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# Event Hubs is AMQP-based, so its client constructors do not use the HTTP
+# ClientOptions pattern expected by AZC0007.
+nowarn:AZC0007 T:Azure.Messaging.EventHubs.Consumer.EventHubConsumerClient
+nowarn:AZC0007 T:Azure.Messaging.EventHubs.Producer.EventHubProducerClient
+nowarn:AZC0007 T:Azure.Messaging.EventHubs.Producer.EventHubBufferedProducerClient
+
+# Event Hubs is AMQP-based and is exempt from HTTP-based return types throughout
+# its client surface.
+nowarn:AZC0015
+
+# These established GA names intentionally overlap models in other shipping
+# libraries and cannot be renamed without a breaking API change.
+nowarn:AZC0034 T:Azure.Messaging.EventHubs.EventData
+nowarn:AZC0034 T:Azure.Messaging.EventHubs.Processor.ProcessErrorEventArgs

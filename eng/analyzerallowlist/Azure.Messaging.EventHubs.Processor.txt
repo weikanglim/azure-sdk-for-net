@@ -1,0 +1,10 @@
+# Azure.Messaging.EventHubs.Processor approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# Event Hubs is AMQP-based, so the processor client does not use the HTTP
+# ClientOptions constructor pattern expected by AZC0007.
+nowarn:AZC0007 T:Azure.Messaging.EventHubs.EventProcessorClient
+
+# Event Hubs Processor is AMQP-based and is exempt from HTTP-based return types
+# throughout its client surface.
+nowarn:AZC0015

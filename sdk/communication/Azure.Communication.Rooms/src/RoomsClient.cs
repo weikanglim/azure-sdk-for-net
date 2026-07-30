@@ -24,7 +24,6 @@ namespace Azure.Communication.Rooms
         internal ParticipantsRestClient ParticipantsServiceClient { get; }
 
         #region public constructors - all arguments need null check
-#pragma warning disable AZC0007
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RoomsClient"/> class.
@@ -74,7 +73,6 @@ namespace Azure.Communication.Rooms
                 options ?? new RoomsClientOptions())
         { }
 
-#pragma warning restore AZC0007
         #endregion
 
         #region private constructors

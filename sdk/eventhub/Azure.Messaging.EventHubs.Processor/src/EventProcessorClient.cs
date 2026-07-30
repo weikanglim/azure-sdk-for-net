@@ -47,7 +47,6 @@ namespace Azure.Messaging.EventHubs
     /// <seealso href="https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/eventhub/Azure.Messaging.EventHubs.Processor/samples">Event Hubs event processor samples and discussion</seealso>
     ///
     [SuppressMessage("Usage", "CA1001:Types that own disposable fields should be disposable.", Justification = "Disposal is managed internally as part of the Stop operation.")]
-    [SuppressMessage("Usage", "AZC0007:DO provide a minimal constructor that takes only the parameters required to connect to the service.", Justification = "Event Hubs are AMQP-based services and don't use ClientOptions functionality")]
     public class EventProcessorClient : EventProcessor<EventProcessorPartition>
     {
         /// <summary>The delegate to invoke when attempting to update a checkpoint using an empty event.</summary>
