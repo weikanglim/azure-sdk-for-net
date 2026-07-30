@@ -4,3 +4,13 @@
 # BatchAccountCertificateFormat is obsolete; its generated serializer must still
 # reference it to round-trip payloads, and generated code cannot carry a pragma.
 nowarn:CS0618 T:Azure.ResourceManager.Batch.Models.BatchAccountCertificateFormatExtensions
+
+# These custom compatibility types intentionally reference the obsolete Batch
+# certificate and disk API surface to preserve existing customer contracts.
+nowarn:CS0618 T:Azure.ResourceManager.Batch.Models.ArmBatchModelFactory
+nowarn:CS0618 T:Azure.ResourceManager.Batch.BatchAccountCertificateData
+nowarn:CS0618 T:Azure.ResourceManager.Batch.BatchAccountCertificateResource
+nowarn:CS0618 T:Azure.ResourceManager.Batch.Models.BatchAccountCertificateCreateOrUpdateContent
+nowarn:CS0618 T:Azure.ResourceManager.Batch.Models.BatchCertificateReference
+nowarn:CS0618 T:Azure.ResourceManager.Batch.Models.BatchVmConfiguration
+nowarn:CS0618 T:Azure.ResourceManager.Batch.Models.ManagedDisk

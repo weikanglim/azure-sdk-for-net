@@ -15,7 +15,6 @@ namespace Azure.ResourceManager.ManagedNetworkFabric
 {
     public partial class NetworkTapData
     {
-#pragma warning disable CS0618 // Preserve obsolete NetworkTap destination compatibility surface.
         /// <summary> Initializes a new instance of <see cref="NetworkTapData"/>. </summary>
         /// <param name="location"> The location. </param>
         /// <param name="networkPacketBrokerId"> ARM resource ID of the Network Packet Broker. </param>
@@ -35,6 +34,5 @@ namespace Azure.ResourceManager.ManagedNetworkFabric
         {
             get => throw new NotSupportedException("This property is obsolete and will be removed in a future version. Use DestinationSettings instead.");
         }
-#pragma warning restore CS0618
     }
 }

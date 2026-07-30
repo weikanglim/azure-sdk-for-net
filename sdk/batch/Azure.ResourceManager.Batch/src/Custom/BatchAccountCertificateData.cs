@@ -1,8 +1,6 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma warning disable CS0618
-
 using System;
 using System.ClientModel.Primitives;
 using System.Collections.Generic;

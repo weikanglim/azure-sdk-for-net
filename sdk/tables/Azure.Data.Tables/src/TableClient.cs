@@ -708,9 +708,7 @@ namespace Azure.Data.Tables
         /// <returns> The <see cref="NullableResponse{T}"/> whose <c>HasValue</c> property will return <c>true</c> if the entity existed, otherwise <c>false</c>.</returns>
         /// <exception cref="RequestFailedException">Exception thrown if an unexpected error occurs.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="partitionKey"/> or <paramref name="rowKey"/> is null.</exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual NullableResponse<T> GetEntityIfExists<T>(string partitionKey, string rowKey, IEnumerable<string> select = null, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
             where T : class, ITableEntity
             => GetEntityInternalAsync<T>(false, partitionKey, rowKey, true, select, cancellationToken).EnsureCompleted();
 
@@ -725,9 +723,7 @@ namespace Azure.Data.Tables
         /// <returns> The <see cref="NullableResponse{T}"/> whose <c>HasValue</c> property will return <c>true</c> if the entity existed, otherwise <c>false</c>.</returns>
         /// <exception cref="RequestFailedException">Exception thrown if an unexpected error occurs.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="partitionKey"/> or <paramref name="rowKey"/> is null.</exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<NullableResponse<T>> GetEntityIfExistsAsync<T>(string partitionKey, string rowKey, IEnumerable<string> select = null, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
             where T : class, ITableEntity
             => await GetEntityInternalAsync<T>(true, partitionKey, rowKey, true, select, cancellationToken).ConfigureAwait(false);
 

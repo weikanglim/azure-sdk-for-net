@@ -17,9 +17,7 @@ public interface IJsonModel<out T> : IPersistableModel<T>
     /// <param name="writer">The <see cref="Utf8JsonWriter"/> to write into.</param>
     /// <param name="options">The <see cref="ModelReaderWriterOptions"/> to use.</param>
     /// <exception cref="FormatException">If the model does not support the requested <see cref="ModelReaderWriterOptions.Format"/>.</exception>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
     void Write(Utf8JsonWriter writer, ModelReaderWriterOptions options);
-#pragma warning restore AZC0014 // Avoid using banned types in public API
 
     /// <summary>
     /// Reads one JSON value (including objects or arrays) from the provided reader and converts it to a model.
@@ -28,7 +26,5 @@ public interface IJsonModel<out T> : IPersistableModel<T>
     /// <param name="options">The <see cref="ModelReaderWriterOptions"/> to use.</param>
     /// <returns>A <typeparamref name="T"/> representation of the JSON value.</returns>
     /// <exception cref="FormatException">If the model does not support the requested <see cref="ModelReaderWriterOptions.Format"/>.</exception>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
     T? Create(ref Utf8JsonReader reader, ModelReaderWriterOptions options);
-#pragma warning restore AZC0014 // Avoid using banned types in public API
 }

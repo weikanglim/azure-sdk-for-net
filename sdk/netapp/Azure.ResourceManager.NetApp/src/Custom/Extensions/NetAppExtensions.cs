@@ -118,7 +118,6 @@ namespace Azure.ResourceManager.NetApp
         }
 
         /// <summary> Gets a quota limit resource (old name, returns old resource type). </summary>
-#pragma warning disable CS0618 // signatures intentionally reference the obsolete NetAppSubscriptionQuotaItemResource for back-compat
         [EditorBrowsable(EditorBrowsableState.Never)]
         public static async Task<NetAppSubscriptionQuotaItemResource> GetNetAppQuotaLimitAsync(this SubscriptionResource subscriptionResource, AzureLocation location, string quotaLimitName)
         {
@@ -138,8 +137,6 @@ namespace Azure.ResourceManager.NetApp
         {
             return GetMockableNetAppSubscriptionResource(subscriptionResource).GetNetAppQuotaLimitsAsync(location);
         }
-#pragma warning restore CS0618
-
         /// <summary> Lists quota limits (old name). </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         public static AsyncPageable<NetAppSubscriptionQuotaItem> GetNetAppQuotaLimitsAsync(this SubscriptionResource subscriptionResource, AzureLocation location, CancellationToken cancellationToken = default)

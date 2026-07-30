@@ -15,12 +15,10 @@ using Microsoft.TypeSpec.Generator.Customizations;
 
 namespace Azure.ResourceManager.ManagedNetworkFabric.Models
 {
-#pragma warning disable CS0618 // Suppress generated overloads that would otherwise reference obsolete compatibility types.
     [CodeGenSuppress("NetworkFabricData", typeof(ResourceIdentifier), typeof(string), typeof(ResourceType), typeof(SystemData), typeof(IDictionary<string, string>), typeof(AzureLocation), typeof(ManagedServiceIdentity), typeof(string), typeof(string), typeof(string), typeof(IEnumerable<string>), typeof(StorageAccountConfiguration), typeof(IEnumerable<NetworkFabricLock>), typeof(ResourceIdentifier), typeof(int?), typeof(int), typeof(string), typeof(string), typeof(long), typeof(TerminalServerConfiguration), typeof(ManagementNetworkConfigurationProperties), typeof(IEnumerable<string>), typeof(IEnumerable<string>), typeof(IEnumerable<string>), typeof(int?), typeof(IEnumerable<ResourceIdentifier>), typeof(IEnumerable<NetworkFabricFeatureFlag>), typeof(IEnumerable<ResourceIdentifier>), typeof(UniqueRouteDistinguisherProperties), typeof(int?), typeof(IEnumerable<string>), typeof(long?), typeof(string), typeof(AuthorizedTransceiverProperties), typeof(NetworkFabricConfigurationState?), typeof(NetworkFabricProvisioningState?), typeof(NetworkFabricAdministrativeState?), typeof(NetworkFabricQosConfigurationState?))]
     [CodeGenSuppress("NetworkTapData", typeof(ResourceIdentifier), typeof(string), typeof(ResourceType), typeof(SystemData), typeof(IDictionary<string, string>), typeof(AzureLocation), typeof(ManagedServiceIdentity), typeof(string), typeof(ResourceIdentifier), typeof(ResourceIdentifier), typeof(IEnumerable<ResourceIdentifier>), typeof(IEnumerable<NetworkTapPropertiesDestinationsItem>), typeof(NetworkTapPollingType?), typeof(string), typeof(NetworkFabricConfigurationState?), typeof(NetworkFabricProvisioningState?), typeof(NetworkFabricAdministrativeState?))]
     [CodeGenSuppress("NetworkFabricInternalNetworkData", typeof(ResourceIdentifier), typeof(string), typeof(ResourceType), typeof(SystemData), typeof(string), typeof(StaticRouteConfigurationExtension?), typeof(int?), typeof(IEnumerable<ConnectedSubnet>), typeof(IEnumerable<ConnectedSubnet>), typeof(ImportRoutePolicy), typeof(ExportRoutePolicy), typeof(ResourceIdentifier), typeof(ResourceIdentifier), typeof(IsMonitoringEnabled?), typeof(int), typeof(InternalNetworkBgpConfiguration), typeof(InternalNetworkStaticRouteConfiguration), typeof(IEnumerable<PrefixLimitProperties>), typeof(IEnumerable<PrefixLimitProperties>), typeof(string), typeof(ResourceIdentifier), typeof(NetworkFabricConfigurationState?), typeof(NetworkFabricProvisioningState?), typeof(NetworkFabricAdministrativeState?))]
     [CodeGenSuppress("NetworkToNetworkInterconnectData", typeof(ResourceIdentifier), typeof(string), typeof(ResourceType), typeof(SystemData), typeof(NniType?), typeof(IsManagementType?), typeof(NetworkFabricBooleanValue), typeof(Layer2Configuration), typeof(NetworkToNetworkInterconnectOptionBLayer3Configuration), typeof(NpbStaticRouteConfiguration), typeof(NniStaticRouteConfiguration), typeof(ImportRoutePolicyInformation), typeof(ExportRoutePolicyInformation), typeof(ResourceIdentifier), typeof(ResourceIdentifier), typeof(NetworkFabricMicroBfdState?), typeof(ConditionalDefaultRouteProperties), typeof(string), typeof(NetworkFabricConfigurationState?), typeof(NetworkFabricProvisioningState?), typeof(NetworkFabricAdministrativeState?))]
-#pragma warning restore CS0618
     public static partial class ArmManagedNetworkFabricModelFactory
     {
         /// <summary> Initializes a new instance of <see cref="Models.NetworkFabricOperationStatusResult"/>. </summary>
@@ -433,10 +431,8 @@ namespace Azure.ResourceManager.ManagedNetworkFabric.Models
 
         /// <summary> Initializes a new instance of <see cref="ManagedNetworkFabric.NetworkTapData"/>. </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable CS0618 // Preserve obsolete compatibility overload.
         [Obsolete("This method is obsolete and will be removed in a future version. Use the overload with NetworkTapDestinationProperties destinations instead.")]
         public static NetworkTapData NetworkTapData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, string annotation, ResourceIdentifier networkPacketBrokerId, ResourceIdentifier sourceTapRuleId, IEnumerable<NetworkTapPropertiesDestinationsItem> destinations, NetworkTapPollingType? pollingType, NetworkFabricConfigurationState? configurationState, NetworkFabricProvisioningState? provisioningState, NetworkFabricAdministrativeState? administrativeState)
-#pragma warning restore CS0618
         {
             throw new NotSupportedException("This method is obsolete and will be removed in a future version. Use the overload with NetworkTapDestinationProperties destinations instead.");
         }
@@ -444,10 +440,8 @@ namespace Azure.ResourceManager.ManagedNetworkFabric.Models
         /// <summary> Initializes a new instance of <see cref="ManagedNetworkFabric.NetworkTapData"/>. </summary>
         /// <returns> A new <see cref="ManagedNetworkFabric.NetworkTapData"/> instance for mocking. </returns>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable CS0618 // Preserve obsolete compatibility overload.
         [Obsolete("This method is obsolete and will be removed in a future version. Use the overload with NetworkTapDestinationProperties destinations instead.")]
         public static NetworkTapData NetworkTapData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, ManagedServiceIdentity identity, string annotation, ResourceIdentifier networkPacketBrokerId, ResourceIdentifier sourceTapRuleId, IEnumerable<ResourceIdentifier> networkFabricIds, IEnumerable<NetworkTapPropertiesDestinationsItem> destinations, NetworkTapPollingType? pollingType, string lastOperationDetails, NetworkFabricConfigurationState? configurationState, NetworkFabricProvisioningState? provisioningState, NetworkFabricAdministrativeState? administrativeState)
-#pragma warning restore CS0618
         {
             throw new NotSupportedException("This method is obsolete and will be removed in a future version. Use the overload with NetworkTapDestinationProperties destinations instead.");
         }

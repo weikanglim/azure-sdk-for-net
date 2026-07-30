@@ -1,0 +1,3 @@
+# The legacy quota extension methods intentionally reference obsolete resource
+# types to preserve source and binary compatibility for existing callers.
+nowarn:CS0618 T:Azure.ResourceManager.NetApp.NetAppExtensions

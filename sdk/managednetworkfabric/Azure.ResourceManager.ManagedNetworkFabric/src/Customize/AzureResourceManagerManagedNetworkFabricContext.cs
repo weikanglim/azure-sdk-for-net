@@ -8,7 +8,6 @@ using Azure.ResourceManager.ManagedNetworkFabric.Models;
 
 namespace Azure.ResourceManager.ManagedNetworkFabric
 {
-#pragma warning disable CS0618 // Register obsolete compatibility models for ModelReaderWriter.
     [ModelReaderWriterBuildable(typeof(InternalNetworkBgpConfiguration))]
     [ModelReaderWriterBuildable(typeof(InternalNetworkStaticRouteConfiguration))]
     [ModelReaderWriterBuildable(typeof(NetworkToNetworkInterconnectOptionBLayer3Configuration))]
@@ -40,7 +39,6 @@ namespace Azure.ResourceManager.ManagedNetworkFabric
     [ModelReaderWriterBuildable(typeof(NetworkTapPatch))]
     [ModelReaderWriterBuildable(typeof(NetworkTapRulePatch))]
     [ModelReaderWriterBuildable(typeof(NetworkFabricOperationStatusResult))]
-#pragma warning restore CS0618
     public partial class AzureResourceManagerManagedNetworkFabricContext
     {
     }

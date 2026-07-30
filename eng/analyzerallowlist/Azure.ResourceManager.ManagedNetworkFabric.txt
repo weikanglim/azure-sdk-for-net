@@ -1,0 +1,5 @@
+# These custom types retain obsolete network-tap compatibility models in public
+# constructors, model factories, and ModelReaderWriter registration.
+nowarn:CS0618 T:Azure.ResourceManager.ManagedNetworkFabric.NetworkTapData
+nowarn:CS0618 T:Azure.ResourceManager.ManagedNetworkFabric.AzureResourceManagerManagedNetworkFabricContext
+nowarn:CS0618 T:Azure.ResourceManager.ManagedNetworkFabric.Models.ArmManagedNetworkFabricModelFactory

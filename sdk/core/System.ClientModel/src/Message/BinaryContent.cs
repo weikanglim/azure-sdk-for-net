@@ -85,11 +85,9 @@ public abstract class BinaryContent : IDisposable
     /// If not provided, the default options will be used.</param>
     /// <returns>An instance of <see cref="BinaryContent"/> that contains the
     /// JSON representation of the provided object.</returns>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
     [RequiresDynamicCode(JsonSerializerRequiresDynamicCode)]
     [RequiresUnreferencedCode(JsonSerializerRequiresUnreferencedCode)]
     public static BinaryContent CreateJson<T>(T jsonSerializable, JsonSerializerOptions? options = default)
-#pragma warning restore AZC0014 // Avoid using banned types in public API
     {
         Argument.AssertNotNull(jsonSerializable, nameof(jsonSerializable));
 
@@ -106,9 +104,7 @@ public abstract class BinaryContent : IDisposable
     /// <param name="jsonTypeInfo">The <see cref="JsonTypeInfo{T}"/> to use for serialization.</param>
     /// <returns>An instance of <see cref="BinaryContent"/> that contains the
     /// JSON representation of the provided object.</returns>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
     public static BinaryContent CreateJson<T>(T jsonSerializable, JsonTypeInfo<T> jsonTypeInfo)
-#pragma warning restore AZC0014 // Avoid using banned types in public API
     {
         Argument.AssertNotNull(jsonSerializable, nameof(jsonSerializable));
         Argument.AssertNotNull(jsonTypeInfo, nameof(jsonTypeInfo));

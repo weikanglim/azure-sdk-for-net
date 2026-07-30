@@ -16,9 +16,7 @@ namespace System.ClientModel.Primitives;
 /// Since <see cref="IJsonModel{T}"/> defines what the serialized shape should look like the <see cref="JsonSerializerOptions"/> are ignored
 /// except for those pertaining to indentation formatting.
 /// </remarks>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
 public class JsonModelConverter : JsonConverter<IJsonModel<object>>
-#pragma warning restore AZC0014 // Avoid using banned types in public API
 {
     private ModelReaderWriterOptions _options;
     private ModelReaderWriterContext? _context;
@@ -69,9 +67,7 @@ public class JsonModelConverter : JsonConverter<IJsonModel<object>>
     }
 
     /// <inheritdoc/>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
     public override IJsonModel<object>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-#pragma warning restore AZC0014 // Avoid using banned types in public API
     {
         IJsonModel<object>? AotCompatActivate()
         {
@@ -97,9 +93,7 @@ public class JsonModelConverter : JsonConverter<IJsonModel<object>>
     }
 
     /// <inheritdoc/>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
     public override void Write(Utf8JsonWriter writer, IJsonModel<object> value, JsonSerializerOptions options)
-#pragma warning restore AZC0014 // Avoid using banned types in public API
     {
         value.Write(writer, _options);
     }

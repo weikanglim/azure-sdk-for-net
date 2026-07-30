@@ -1,0 +1,9 @@
+# BinaryContent's established JSON factory overloads expose System.Text.Json
+# metadata types so callers can select reflection-based or source-generated serialization.
+nowarn:AZC0014 M:System.ClientModel.BinaryContent.CreateJson``1(``0,System.Text.Json.JsonSerializerOptions)
+nowarn:AZC0014 M:System.ClientModel.BinaryContent.CreateJson``1(``0,System.Text.Json.Serialization.Metadata.JsonTypeInfo{``0})
+
+# The JSON model contract and converter necessarily expose System.Text.Json
+# reader, writer, converter, and options types to implement JSON serialization.
+nowarn:AZC0014 T:System.ClientModel.Primitives.IJsonModel`1
+nowarn:AZC0014 T:System.ClientModel.Primitives.JsonModelConverter
