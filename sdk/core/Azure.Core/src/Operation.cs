@@ -15,9 +15,7 @@ namespace Azure
     /// <summary>
     /// Represents a long-running operation.
     /// </summary>
-#pragma warning disable AZC0012 // Avoid single word type names
     public abstract class Operation
-#pragma warning restore AZC0012 // Avoid single word type names
     {
         /// <summary>
         /// Rehydrates an operation from a <see cref="RehydrationToken"/>.

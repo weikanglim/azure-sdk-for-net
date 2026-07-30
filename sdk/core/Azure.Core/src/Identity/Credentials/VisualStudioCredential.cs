@@ -25,7 +25,6 @@ namespace Azure.Identity
     /// <seealso href="https://learn.microsoft.com/dotnet/azure/configure-visual-studio" /> for more information
     /// on how to configure Visual Studio for Azure development.
     /// </summary>
-#pragma warning disable AZC0034 // Type moved from Azure.Identity to Azure.Core; name conflict with NuGet Azure.Identity is expected
     [UnsupportedOSPlatform("browser")]
     [TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]
     public class VisualStudioCredential : TokenCredential
@@ -334,5 +333,4 @@ namespace Azure.Identity
             public int CompareTo(VisualStudioTokenProvider other) => _preference.CompareTo(other._preference);
         }
     }
-#pragma warning restore AZC0034
 }

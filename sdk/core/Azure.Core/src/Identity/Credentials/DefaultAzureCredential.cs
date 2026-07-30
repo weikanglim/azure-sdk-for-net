@@ -61,7 +61,6 @@ namespace Azure.Identity
     ///     credential);
     /// </code>
     /// </example>
-#pragma warning disable AZC0034 // Type moved from Azure.Identity to Azure.Core; name conflict with NuGet Azure.Identity is expected
     [UnsupportedOSPlatform("browser")]
     [TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]
     public class DefaultAzureCredential : TokenCredential
@@ -237,5 +236,4 @@ namespace Azure.Identity
             return options;
         }
     }
-#pragma warning restore AZC0034
 }

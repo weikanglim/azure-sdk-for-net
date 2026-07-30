@@ -48,7 +48,6 @@ namespace Azure.Identity
     /// <see cref="ClientSecretCredential"/> or <see cref="ClientCertificateCredential"/>). Please consult the documentation of the selected
     /// credential for more details.
     /// </summary>
-#pragma warning disable AZC0034 // Type moved from Azure.Identity to Azure.Core; name conflict with NuGet Azure.Identity is expected
     [UnsupportedOSPlatform("browser")]
     [TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]
     public class EnvironmentCredential : TokenCredential
@@ -193,5 +192,4 @@ namespace Azure.Identity
             }
         }
     }
-#pragma warning restore AZC0034
 }

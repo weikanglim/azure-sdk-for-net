@@ -36,3 +36,27 @@ nowarn:AZC0034 T:Azure.Identity.UsernamePasswordCredentialOptions
 nowarn:AZC0034 T:Azure.Identity.VisualStudioCodeCredentialOptions
 nowarn:AZC0034 T:Azure.Identity.VisualStudioCredentialOptions
 nowarn:AZC0034 T:Azure.Identity.WorkloadIdentityCredentialOptions
+
+# These foundational Azure.Core abstractions have established single-word names that are retained
+# for API compatibility, so AZC0012 is narrowly suppressed per type.
+nowarn:AZC0012 T:Azure.Core.Request
+nowarn:AZC0012 T:Azure.Operation
+nowarn:AZC0012 T:Azure.Operation`1
+nowarn:AZC0012 T:Azure.Page`1
+nowarn:AZC0012 T:Azure.Pageable`1
+nowarn:AZC0012 T:Azure.Response
+nowarn:AZC0012 T:Azure.Response`1
+
+# These established Azure.Identity credential types were moved into Azure.Core for compatibility.
+# Their names intentionally overlap the Azure.Identity package, so AZC0034 is suppressed per type.
+nowarn:AZC0034 T:Azure.Identity.ChainedTokenCredential
+nowarn:AZC0034 T:Azure.Identity.ClientCertificateCredential
+nowarn:AZC0034 T:Azure.Identity.DefaultAzureCredential
+nowarn:AZC0034 T:Azure.Identity.DefaultAzureCredentialOptions
+nowarn:AZC0034 T:Azure.Identity.EnvironmentCredential
+nowarn:AZC0034 T:Azure.Identity.InteractiveBrowserCredential
+nowarn:AZC0034 T:Azure.Identity.OnBehalfOfCredential
+nowarn:AZC0034 T:Azure.Identity.UsernamePasswordCredential
+nowarn:AZC0034 T:Azure.Identity.VisualStudioCodeCredential
+nowarn:AZC0034 T:Azure.Identity.VisualStudioCredential
+nowarn:AZC0034 T:Azure.Identity.WorkloadIdentityCredential
