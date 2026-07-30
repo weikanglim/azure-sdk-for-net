@@ -14,7 +14,6 @@ namespace Azure.ResourceManager.Sql
 {
     public partial class ManagedInstanceResource
     {
-#pragma warning disable CS0618 // obsolete types used for back-compat overloads
         /// <summary> Gets top resource consuming queries. </summary>
         [Obsolete("This overload is obsolete and will be removed in a future release. Use the explicit parameter overload instead.", false)]
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -32,7 +31,6 @@ namespace Azure.ResourceManager.Sql
             options ??= new ManagedInstanceResourceGetTopQueriesOptions();
             return GetTopQueriesAsync(options.NumberOfQueries, options.Databases, options.StartTime, options.EndTime, options.Interval, options.AggregationFunction, options.ObservationMetric, cancellationToken);
         }
-#pragma warning restore CS0618
 
         /// <summary> Gets a collection of <see cref="DistributedAvailabilityGroupResource"/>. </summary>
         [Obsolete("Use GetSqlDistributedAvailabilityGroups instead.", false)]

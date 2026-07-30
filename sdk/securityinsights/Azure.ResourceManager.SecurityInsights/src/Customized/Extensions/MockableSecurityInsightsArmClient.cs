@@ -3,8 +3,6 @@
 
 #nullable disable
 
-#pragma warning disable CS0618 // This compatibility shim intentionally exposes the obsolete legacy wrapper.
-
 using System.ComponentModel;
 using Azure.Core;
 
@@ -26,5 +24,3 @@ namespace Azure.ResourceManager.SecurityInsights.Mocking
         }
     }
 }
-
-#pragma warning restore CS0618

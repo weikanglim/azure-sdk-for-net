@@ -18,10 +18,8 @@ namespace Azure.Monitor.OpenTelemetry.Exporter.Models
             Measurements = new ChangeTrackingDictionary<string, double>();
             Message = message?.Truncate(SchemaConstants.MessageData_Message_MaxLength);
 
-#pragma warning disable CS0618 // Type or member is obsolete
             // TODO: Remove warning disable with next Stable release.
             SeverityLevel = LogsHelper.GetSeverityLevel(logRecord.LogLevel);
-#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }

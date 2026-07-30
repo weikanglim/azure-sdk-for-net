@@ -75,7 +75,6 @@ namespace Azure.Storage.Cryptography
         {
             switch (encryptionData.EncryptionAgent.EncryptionVersion)
             {
-#pragma warning disable CS0618 // obsolete
                 case ClientSideEncryptionVersionInternal.V1_0:
                     return await DecryptReadInternalV1_0(
                         ciphertext,
@@ -84,7 +83,6 @@ namespace Azure.Storage.Cryptography
                         noPadding,
                         async,
                         cancellationToken).ConfigureAwait(false);
-#pragma warning restore CS0618 // obsolete
                 case ClientSideEncryptionVersionInternal.V2_0:
                 case ClientSideEncryptionVersionInternal.V2_1:
                     return await DecryptInternalV2_0(
@@ -126,14 +124,12 @@ namespace Azure.Storage.Cryptography
         {
             switch (encryptionData.EncryptionAgent.EncryptionVersion)
             {
-#pragma warning disable CS0618 // obsolete
                 case ClientSideEncryptionVersionInternal.V1_0:
                     return await DecryptWholeContentWriteInternalV1_0(
                         plaintextDestination,
                         encryptionData,
                         async,
                         cancellationToken).ConfigureAwait(false);
-#pragma warning restore CS0618 // obsolete
                 case ClientSideEncryptionVersionInternal.V2_0:
                 case ClientSideEncryptionVersionInternal.V2_1:
                     return await DecryptInternalV2_0(
@@ -413,11 +409,9 @@ namespace Azure.Storage.Cryptography
             Memory<byte> unwrappedKey;
             switch (encryptionData.EncryptionAgent.EncryptionVersion)
             {
-#pragma warning disable CS0618 // obsolete
                 case ClientSideEncryptionVersionInternal.V1_0:
                     unwrappedKey = unwrappedContent;
                     break;
-#pragma warning restore CS0618 // obsolete
                 // v2.0 binds content encryption key with content encryption algorithm under a single keywrap.
                 // Separate key from algorithm ID and validate ID match
                 case ClientSideEncryptionVersionInternal.V2_0:

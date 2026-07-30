@@ -72,9 +72,7 @@ namespace Azure.Storage.Shared
         {
             string key = version switch
             {
-#pragma warning disable CS0618 // Type or member is obsolete
                 ClientSideEncryptionVersion.V1_0 => Constants.ClientSideEncryption.HttpMessagePropertyKeyV1,
-#pragma warning restore CS0618 // Type or member is obsolete
                 ClientSideEncryptionVersion.V2_0 => Constants.ClientSideEncryption.HttpMessagePropertyKeyV2,
                 _ => throw Errors.ClientSideEncryption.UnrecognizedVersion(),
             };

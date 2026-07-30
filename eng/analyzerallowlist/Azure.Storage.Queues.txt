@@ -8,3 +8,11 @@ nowarn:AZC0034 T:Azure.Storage.Queues.Models.UserDelegationKey
 
 # QueueClient retains V1 client-side encryption support to read and update legacy encrypted data.
 nowarn:CS0618 T:Azure.Storage.Queues.QueueClient
+
+# Shared client-side encryption code intentionally uses obsolete V1 APIs to read legacy data.
+nowarn:CS0618 T:Azure.Storage.Shared.StorageExtensions
+nowarn:CS0618 T:Azure.Storage.Cryptography.ClientSideDecryptor
+nowarn:CS0618 T:Azure.Storage.Cryptography.ClientSideEncryptionOptionsExtensions
+nowarn:CS0618 T:Azure.Storage.Cryptography.ClientSideEncryptorV1_0
+nowarn:CS0618 T:Azure.Storage.Cryptography.Models.ClientSideEncryptionVersionExtensions
+nowarn:CS0618 T:Azure.Storage.Cryptography.Models.EncryptionData

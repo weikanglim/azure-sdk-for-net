@@ -9,3 +9,11 @@ nowarn:AZC0015 T:Azure.Storage.Blobs.Specialized.AppendBlobClient
 nowarn:AZC0015 T:Azure.Storage.Blobs.Specialized.BlockBlobClient
 nowarn:AZC0015 T:Azure.Storage.Blobs.Specialized.PageBlobClient
 nowarn:CS0618 T:Azure.Storage.Blobs.BlobClientSideDecryptor
+
+# Shared client-side encryption code intentionally uses obsolete V1 APIs to read legacy data.
+nowarn:CS0618 T:Azure.Storage.Shared.StorageExtensions
+nowarn:CS0618 T:Azure.Storage.Cryptography.ClientSideDecryptor
+nowarn:CS0618 T:Azure.Storage.Cryptography.ClientSideEncryptionOptionsExtensions
+nowarn:CS0618 T:Azure.Storage.Cryptography.ClientSideEncryptorV1_0
+nowarn:CS0618 T:Azure.Storage.Cryptography.Models.ClientSideEncryptionVersionExtensions
+nowarn:CS0618 T:Azure.Storage.Cryptography.Models.EncryptionData

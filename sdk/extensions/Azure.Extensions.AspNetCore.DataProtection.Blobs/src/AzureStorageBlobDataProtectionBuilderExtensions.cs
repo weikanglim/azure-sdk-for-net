@@ -11,9 +11,7 @@ using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-#pragma warning disable // TODO cleanup of all the warning messages. Issue https://github.com/Azure/azure-sdk-for-net/issues/43768
 namespace Microsoft.AspNetCore.DataProtection
-#pragma warning disable
 {
     /// <summary>
     /// Contains Azure-specific extension methods for modifying a
@@ -26,7 +24,7 @@ namespace Microsoft.AspNetCore.DataProtection
         /// in Azure Blob Storage.
         /// </summary>
         /// <param name="builder">The builder instance to modify.</param>
-        /// <param name="sasUri">The full URI where the key file should be stored.
+        /// <param name="blobSasUri">The full URI where the key file should be stored.
         /// The URI must contain the SAS token as a query string parameter.</param>
         /// <returns>The value <paramref name="builder"/>.</returns>
         /// <remarks>
@@ -64,8 +62,7 @@ namespace Microsoft.AspNetCore.DataProtection
         /// in Azure Blob Storage.
         /// </summary>
         /// <param name="builder">The builder instance to modify.</param>
-        /// <param name="sasUri">The full URI where the key file should be stored.
-        /// The URI must contain the SAS token as a query string parameter.</param>
+        /// <param name="blobUri">The full URI where the key file should be stored.</param>
         /// <param name="tokenCredential">The credentials to connect to the blob.</param>
         /// <returns>The value <paramref name="builder"/>.</returns>
         /// <remarks>
@@ -96,8 +93,7 @@ namespace Microsoft.AspNetCore.DataProtection
         /// in Azure Blob Storage.
         /// </summary>
         /// <param name="builder">The builder instance to modify.</param>
-        /// <param name="sasUri">The full URI where the key file should be stored.
-        /// The URI must contain the SAS token as a query string parameter.</param>
+        /// <param name="blobUri">The full URI where the key file should be stored.</param>
         /// <param name="sharedKeyCredential">The credentials to connect to the blob.</param>
         /// <returns>The value <paramref name="builder"/>.</returns>
         /// <remarks>
@@ -201,7 +197,7 @@ namespace Microsoft.AspNetCore.DataProtection
         /// key file should be stored.</param>
         /// <returns>The value <paramref name="builder"/>.</returns>
         /// <remarks>
-        /// The blob referenced by <paramref name="blobClient"/> must already exist.
+        /// The blob returned by <paramref name="blobClientFactory"/> must already exist.
         /// </remarks>
         public static IDataProtectionBuilder PersistKeysToAzureBlobStorage(this IDataProtectionBuilder builder, Func<IServiceProvider, BlobClient> blobClientFactory)
         {

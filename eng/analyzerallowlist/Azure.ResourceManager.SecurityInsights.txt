@@ -1,0 +1,7 @@
+# Azure.ResourceManager.SecurityInsights approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# Compatibility shims intentionally retain obsolete legacy wrappers and model types.
+nowarn:CS0618 T:Azure.ResourceManager.SecurityInsights.Models.ArmSecurityInsightsModelFactory
+nowarn:CS0618 T:Azure.ResourceManager.SecurityInsights.Mocking.MockableSecurityInsightsArmClient
+nowarn:CS0618 T:Azure.ResourceManager.SecurityInsights.SecurityInsightsExtensions

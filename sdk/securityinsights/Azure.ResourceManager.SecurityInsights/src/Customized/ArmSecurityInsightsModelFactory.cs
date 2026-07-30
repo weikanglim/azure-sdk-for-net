@@ -3,8 +3,6 @@
 
 #nullable disable
 
-#pragma warning disable CS0618 // This compatibility overload intentionally exposes the obsolete Source type.
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,5 +83,3 @@ namespace Azure.ResourceManager.SecurityInsights.Models
         }
     }
 }
-
-#pragma warning restore CS0618

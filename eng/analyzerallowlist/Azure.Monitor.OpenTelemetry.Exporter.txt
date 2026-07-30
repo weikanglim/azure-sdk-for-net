@@ -11,3 +11,7 @@
 # a per-property opt-out, so the suppression has to apply at the assembly level.
 nowarn:SYSLIB1100
 nowarn:SYSLIB1101
+
+# Compatibility models intentionally consume obsolete telemetry contracts.
+nowarn:CS0618 T:Microsoft.ApplicationInsights.Extensibility.Implementation.External.MessageData
+nowarn:CS0618 T:Microsoft.ApplicationInsights.Extensibility.Implementation.External.TelemetryExceptionData

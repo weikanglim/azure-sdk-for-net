@@ -13,7 +13,7 @@ namespace Azure.Extensions.AspNetCore.DataProtection.Keys
 {
 #pragma warning disable CA1812 // False positive, AzureKeyVaultXmlDecryptor is used in AzureKeyVaultXmlEncryptor
     internal class AzureKeyVaultXmlDecryptor : IXmlDecryptor
-#pragma warning restore
+#pragma warning restore CA1812
     {
         private readonly IKeyEncryptionKeyResolver _client;
 
