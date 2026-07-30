@@ -13,7 +13,6 @@ using Azure.ResourceManager.Monitor.Models;
 
 namespace Azure.ResourceManager.Monitor.Models
 {
-#pragma warning disable CS0618 // This partial class intentionally exposes obsolete workspace-redirect compatibility members.
     public static partial class ArmMonitorModelFactory
     {
         /// <summary>

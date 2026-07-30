@@ -5,7 +5,6 @@
 
 namespace Azure.ResourceManager.Monitor.Models
 {
-#pragma warning disable CS0618 // This helper intentionally bridges the obsolete enum to the generated replacement.
     internal static class MetricTriggerComparisonOperationHelper
     {
         public static MetricTriggerComparisonOperation ToLegacyComparisonOperation(MetricTriggerComparisonOperator value) => value switch

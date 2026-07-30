@@ -3,8 +3,6 @@
 
 #nullable disable
 
-#pragma warning disable CS0618 // This file intentionally exposes obsolete removed-type compatibility signatures.
-
 using System;
 using System.ComponentModel;
 using System.Threading;

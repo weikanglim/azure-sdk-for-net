@@ -1,0 +1,15 @@
+# These types intentionally preserve obsolete compatibility APIs that were removed from
+# generated code. Their implementations must reference the obsolete types they bridge.
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.ArmMonitorModelFactory
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Mocking.MockableMonitorArmClient
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Mocking.MockableMonitorResourceGroupResource
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Mocking.MockableMonitorSubscriptionResource
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.MonitorExtensions
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.MetricTriggerComparisonOperationHelper
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.MonitorAggregationTypeHelper
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.MonitorAggregationTypeExtensions
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.MonitorMetricDefinition
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.MonitorSubscriptionScopeMetric
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.UnknownRuleAction
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.UnknownRuleCondition
+nowarn:CS0618 T:Azure.ResourceManager.Monitor.Models.UnknownRuleDataSource

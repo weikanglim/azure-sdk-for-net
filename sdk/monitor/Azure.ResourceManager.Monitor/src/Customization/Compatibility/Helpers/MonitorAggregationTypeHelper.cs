@@ -5,7 +5,6 @@
 
 namespace Azure.ResourceManager.Monitor.Models
 {
-#pragma warning disable CS0618 // This helper intentionally bridges the obsolete enum to generated replacement types.
     internal static class MonitorAggregationTypeHelper
     {
         public static MonitorAggregationType? ToLegacyAggregationType(MonitorMetricAggregationType? value)

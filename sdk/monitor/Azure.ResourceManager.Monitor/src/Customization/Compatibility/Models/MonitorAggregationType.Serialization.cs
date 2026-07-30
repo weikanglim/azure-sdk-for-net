@@ -7,7 +7,6 @@ using System;
 
 namespace Azure.ResourceManager.Monitor.Models
 {
-#pragma warning disable CS0618 // This bridge intentionally serializes the obsolete restored enum.
     internal static partial class MonitorAggregationTypeExtensions
     {
         public static string ToSerialString(this MonitorAggregationType value) => value.ToString();

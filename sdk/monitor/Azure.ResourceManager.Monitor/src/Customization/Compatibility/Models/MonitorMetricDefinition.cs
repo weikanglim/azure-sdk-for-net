@@ -9,7 +9,6 @@ using System.ComponentModel;
 
 namespace Azure.ResourceManager.Monitor.Models
 {
-#pragma warning disable CS0618 // This partial class intentionally exposes obsolete compatibility members.
     public partial class MonitorMetricDefinition
     {
         // The generated aggregation type is intentionally renamed away from MonitorAggregationType.

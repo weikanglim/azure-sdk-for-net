@@ -13,7 +13,6 @@ using Microsoft.TypeSpec.Generator.Customizations;
 
 namespace Azure.ResourceManager.Monitor.Models
 {
-#pragma warning disable CS0618 // This partial class intentionally exposes obsolete compatibility members.
     [CodeGenSuppress("MonitorMetricDefinition", typeof(bool?), typeof(string), typeof(string), typeof(MonitorLocalizableString), typeof(string), typeof(string), typeof(MonitorMetricClass?), typeof(MonitorMetricUnit?), typeof(MonitorAggregationType?), typeof(IEnumerable<MonitorAggregationType>), typeof(IEnumerable<MonitorMetricAvailability>), typeof(string), typeof(IEnumerable<MonitorLocalizableString>))]
     public static partial class ArmMonitorModelFactory
     {
