@@ -108,9 +108,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
                 return Task.FromResult(listener);
             };
 
-#pragma warning disable 618
             ITriggerBinding binding = BindingFactory.GetTriggerBinding(new ServiceBusTriggerBindingStrategy(), parameter, _converterManager, createListener);
-#pragma warning restore 618
 
             return Task.FromResult<ITriggerBinding>(binding);
         }

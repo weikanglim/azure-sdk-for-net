@@ -1,0 +1,12 @@
+# Azure.ResourceManager approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These established constructors and convenience methods predate the current
+# client design rules; changing them would break the GA public API.
+nowarn:AZC0007 M:Azure.ResourceManager.ArmClient.#ctor(Azure.Core.TokenCredential)
+nowarn:AZC0015 M:Azure.ResourceManager.ArmClient.GetDefaultSubscription(System.Threading.CancellationToken)
+nowarn:AZC0015 M:Azure.ResourceManager.ArmClient.GetDefaultSubscriptionAsync(System.Threading.CancellationToken)
+
+# The obsolete compatibility property intentionally uses its obsolete backing
+# model while forwarding values to the replacement property.
+nowarn:CS0618 T:Azure.ResourceManager.Resources.PolicyAssignmentData

@@ -4,3 +4,9 @@
 # 'MessageContent' collides with Azure.Core's Azure.Messaging.MessageContent
 # but is the intended public model name; the two are never referenced together.
 nowarn:AZC0034 T:Azure.Communication.Messages.MessageContent
+
+# Compatibility factories and polymorphic deserialization intentionally
+# reference obsolete models retained for existing consumers.
+nowarn:CS0618 M:Azure.Communication.Messages.CommunicationMessagesModelFactory.MediaNotificationContent(System.Guid,System.Collections.Generic.IEnumerable{System.String},System.String,System.Uri)
+nowarn:CS0618 M:Azure.Communication.Messages.CommunicationMessagesModelFactory.WhatsAppMessageTemplateItem(System.String,System.String,Azure.Communication.Messages.Models.Channels.MessageTemplateStatus,System.BinaryData)
+nowarn:CS0618 M:Azure.Communication.Messages.NotificationContent.DeserializeNotificationContent(System.Text.Json.JsonElement,System.ClientModel.Primitives.ModelReaderWriterOptions)

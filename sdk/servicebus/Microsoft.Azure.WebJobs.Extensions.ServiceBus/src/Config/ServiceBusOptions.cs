@@ -212,7 +212,6 @@ namespace Microsoft.Azure.WebJobs.ServiceBus
         /// <summary>
         /// Gets or sets the JSON serialization settings to use when binding to POCOs.
         /// </summary>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
         public JsonSerializerSettings JsonSerializerSettings { get; set; } = new()
         {
             // The default value, DateParseHandling.DateTime, drops time zone information from DateTimeOffets.
@@ -226,8 +225,6 @@ namespace Microsoft.Azure.WebJobs.ServiceBus
         /// <inheritdoc cref="ServiceBusClientOptions.EnableCrossEntityTransactions"/>
         /// </summary>
         public bool EnableCrossEntityTransactions { get; set; }
-
-#pragma warning restore AZC0014 // Avoid using banned types in public API
 
         /// <summary>
         /// Formats the options as JSON objects for display.

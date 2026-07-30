@@ -78,7 +78,6 @@ namespace Azure.Communication.Messages
         /// <param name="mediaUri"> A media url for the file. </param>
         /// <returns> A new <see cref="MediaNotificationContent"/> instance for mocking. </returns>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable CS0618
         public static MediaNotificationContent MediaNotificationContent(Guid channelRegistrationId = default, IEnumerable<string> to = default, string content = default, Uri mediaUri = default)
         {
             to ??= new ChangeTrackingList<string>();
@@ -91,8 +90,6 @@ namespace Azure.Communication.Messages
                 content,
                 mediaUri);
         }
-#pragma warning restore CS0618
-
         /// <summary> Receipt of the sending one message. </summary>
         /// <param name="messageId"> The message id. </param>
         /// <param name="to"> The native external platform user identifier of the recipient. </param>
@@ -257,7 +254,6 @@ namespace Azure.Communication.Messages
         /// <param name="content"> WhatsApp platform's template content. </param>
         /// <returns> A new <see cref="Models.Channels.WhatsAppMessageTemplateItem"/> instance for mocking. </returns>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable CS0618
         public static Models.Channels.WhatsAppMessageTemplateItem WhatsAppMessageTemplateItem(string name = default, string language = default, MessageTemplateStatus status = default, BinaryData content = default)
             => new Models.Channels.WhatsAppMessageTemplateItem(
                 name,
@@ -266,6 +262,5 @@ namespace Azure.Communication.Messages
                 CommunicationMessagesChannel.WhatsApp,
                 additionalBinaryDataProperties: null,
                 content);
-#pragma warning restore CS0618
     }
 }

@@ -10,8 +10,6 @@ using Azure.AI.OpenAI.Files;
 
 namespace Azure.AI.OpenAI;
 
-#pragma warning disable CS0618
-
 [Experimental("AOAI001")]
 public static partial class AzureFileExtensions
 {

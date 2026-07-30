@@ -1,0 +1,11 @@
+# Microsoft.Azure.WebJobs.Extensions.ServiceBus approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# This established compatibility property exposes Newtonsoft.Json settings;
+# changing its type would break the public binding configuration API.
+nowarn:AZC0014 P:Microsoft.Azure.WebJobs.ServiceBus.ServiceBusOptions.JsonSerializerSettings
+
+# The trigger adapter must implement obsolete WebJobs host interfaces retained
+# by the extension's existing runtime contract.
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.ServiceBus.ServiceBusTriggerBindingStrategy
+nowarn:CS0618 N:Microsoft.Azure.WebJobs.ServiceBus

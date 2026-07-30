@@ -1,0 +1,13 @@
+# Azure.Projects approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These clients are created from a project connection provider rather than the
+# standard Azure.Core credential/options pattern.
+nowarn:AZC0007 M:Azure.Projects.OfxClient.#ctor(Azure.Projects.ProjectClient)
+nowarn:AZC0007 M:Azure.Projects.OfxClient.#ctor
+nowarn:AZC0007 M:Azure.Projects.ProjectClient.#ctor(System.ClientModel.Primitives.ConnectionProvider)
+nowarn:AZC0007 M:Azure.Projects.ProjectClient.#ctor(System.String,System.ClientModel.Primitives.ConnectionProvider)
+nowarn:AZC0007 M:Azure.Projects.OfxClient.#ctor(System.String,System.ClientModel.Primitives.ConnectionProvider)
+nowarn:AZC0007 M:Azure.Core.Rest.RestClient.#ctor
+nowarn:AZC0007 M:Azure.Core.Rest.RestClient.#ctor(System.ClientModel.Primitives.PipelinePolicy)
+nowarn:AZC0007 M:Azure.Projects.ProjectClient.#ctor

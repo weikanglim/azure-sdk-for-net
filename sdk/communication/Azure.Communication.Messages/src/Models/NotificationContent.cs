@@ -25,7 +25,6 @@ namespace Azure.Communication.Messages
 
         /// <param name="element"> The JSON element to deserialize. </param>
         /// <param name="options"> The client options for reading and writing models. </param>
-#pragma warning disable CS0618
         internal static NotificationContent DeserializeNotificationContent(JsonElement element, ModelReaderWriterOptions options)
         {
             if (element.ValueKind == JsonValueKind.Null)
@@ -60,6 +59,5 @@ namespace Azure.Communication.Messages
             }
             return UnknownNotificationContent.DeserializeUnknownNotificationContent(element, options);
         }
-#pragma warning restore CS0618
     }
 }

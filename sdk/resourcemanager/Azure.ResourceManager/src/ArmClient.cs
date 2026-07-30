@@ -43,9 +43,7 @@ namespace Azure.ResourceManager
         /// </summary>
         /// <param name="credential"> A credential used to authenticate to an Azure Service. </param>
         /// <exception cref="ArgumentNullException"> If <see cref="TokenCredential"/> is null. </exception>
-#pragma warning disable AZC0007 // DO provide a minimal constructor that takes only the parameters required to connect to the service.
         public ArmClient(TokenCredential credential) : this(credential, default, default)
-#pragma warning restore AZC0007 // DO provide a minimal constructor that takes only the parameters required to connect to the service.
         {
         }
 
@@ -173,9 +171,7 @@ namespace Azure.ResourceManager
         /// Gets the default subscription.
         /// </summary>
         /// <returns> Resource operations of the Subscription. </returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual SubscriptionResource GetDefaultSubscription(CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             using var scope = _subscriptionClientDiagnostics.CreateScope("ArmClient.GetDefaultSubscription");
             scope.Start();
@@ -210,9 +206,7 @@ namespace Azure.ResourceManager
         /// Gets the default subscription.
         /// </summary>
         /// <returns> Resource operations of the Subscription. </returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<SubscriptionResource> GetDefaultSubscriptionAsync(CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             using var scope = _subscriptionClientDiagnostics.CreateScope("ArmClient.GetDefaultSubscription");
             scope.Start();

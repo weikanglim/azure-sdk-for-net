@@ -5,3 +5,10 @@
 # and therefore intentionally provides constructors outside Azure.Core's client
 # constructor pattern.
 nowarn:AZC0007 T:Azure.AI.OpenAI.AzureOpenAIClient
+
+# These compatibility file APIs intentionally derive from and expose obsolete
+# upstream OpenAI file types until their replacement surface is available.
+nowarn:CS0618 T:Azure.AI.OpenAI.Files.AzureFileExpirationOptions
+nowarn:CS0618 T:Azure.AI.OpenAI.AzureFileExtensions
+nowarn:CS0618 T:Azure.AI.OpenAI.Files.AzureOpenAIFile
+nowarn:CS0618 T:Azure.AI.OpenAI.Files.AzureFileExpirationAnchor

@@ -11,9 +11,7 @@ using Microsoft.Azure.WebJobs.Host.Triggers;
 namespace Microsoft.Azure.WebJobs.ServiceBus
 {
     // Binding strategy for a service bus triggers.
-#pragma warning disable 618
     internal class ServiceBusTriggerBindingStrategy : ITriggerBindingStrategy<ServiceBusReceivedMessage, ServiceBusTriggerInput>
-#pragma warning restore 618
     {
         public ServiceBusTriggerInput ConvertFromString(string input)
         {

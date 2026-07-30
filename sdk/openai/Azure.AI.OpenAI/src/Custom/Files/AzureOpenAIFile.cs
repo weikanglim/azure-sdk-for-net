@@ -7,8 +7,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Azure.AI.OpenAI.Files;
 
-#pragma warning disable CS0618
-
 /// <summary>
 /// The scenario client used for Files operations with the Azure OpenAI service.
 /// </summary>
