@@ -19,7 +19,6 @@ namespace Azure.Identity
     /// Account information relating to an authentication request.
     /// </summary>
     /// <seealso cref="TokenCachePersistenceOptions"/>.
-#pragma warning disable AZC0034 // Type moved from Azure.Identity to Azure.Core; name conflict with NuGet Azure.Identity is expected
     [TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]
     public class AuthenticationRecord
     {
@@ -243,5 +242,4 @@ namespace Azure.Identity
             return accountId;
         }
     }
-#pragma warning restore AZC0034
 }

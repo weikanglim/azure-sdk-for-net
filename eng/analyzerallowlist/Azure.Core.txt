@@ -1,0 +1,19 @@
+# Azure.Core approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These established Azure.Identity types were moved into Azure.Core for compatibility. Their names
+# intentionally overlap the Azure.Identity package, so AZC0034 is narrowly suppressed per type.
+nowarn:AZC0034 T:Azure.Identity.AuthenticationFailedException
+nowarn:AZC0034 T:Azure.Identity.AuthenticationRecord
+nowarn:AZC0034 T:Azure.Identity.AuthenticationRequiredException
+nowarn:AZC0034 T:Azure.Identity.AzureAuthorityHosts
+nowarn:AZC0034 T:Azure.Identity.AuthorizationCodeCredential
+nowarn:AZC0034 T:Azure.Identity.AuthorizationCodeCredentialOptions
+nowarn:AZC0034 T:Azure.Identity.AzureCliCredential
+nowarn:AZC0034 T:Azure.Identity.AzureCliCredentialOptions
+nowarn:AZC0034 T:Azure.Identity.AzureDeveloperCliCredential
+nowarn:AZC0034 T:Azure.Identity.AzureDeveloperCliCredentialOptions
+nowarn:AZC0034 T:Azure.Identity.AzurePipelinesCredential
+nowarn:AZC0034 T:Azure.Identity.AzurePipelinesCredentialOptions
+nowarn:AZC0034 T:Azure.Identity.AzurePowerShellCredential
+nowarn:AZC0034 T:Azure.Identity.AzurePowerShellCredentialOptions

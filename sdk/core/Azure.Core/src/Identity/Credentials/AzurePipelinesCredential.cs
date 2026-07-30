@@ -20,7 +20,6 @@ namespace Azure.Identity
     /// <see href="https://aka.ms/azsdk/net/identity/azurepipelinescredential/usage">Authenticating in Azure
     /// Pipelines with service connections</see>.
     /// </summary>
-#pragma warning disable AZC0034 // Type moved from Azure.Identity to Azure.Core; name conflict with NuGet Azure.Identity is expected
     [UnsupportedOSPlatform("browser")]
     [TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]
     public class AzurePipelinesCredential : TokenCredential
@@ -170,5 +169,4 @@ namespace Azure.Identity
             return oidcToken;
         }
     }
-#pragma warning restore AZC0034
 }
