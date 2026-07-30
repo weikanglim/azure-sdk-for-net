@@ -13,9 +13,7 @@ using Microsoft.Azure.WebJobs.Host.Triggers;
 namespace Microsoft.Azure.WebJobs.EventHubs
 {
     // Binding strategy for an event hub triggers.
-#pragma warning disable 618
     internal class EventHubTriggerBindingStrategy : ITriggerBindingStrategy<EventData, EventHubTriggerInput>
-#pragma warning restore 618
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public EventHubTriggerInput ConvertFromString(string input)

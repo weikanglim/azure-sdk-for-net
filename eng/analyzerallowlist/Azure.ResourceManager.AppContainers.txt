@@ -1,0 +1,13 @@
+# Azure.ResourceManager.AppContainers approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These service-defined list-result names are established public API and cannot
+# be renamed without breaking compatibility.
+nowarn:AZC0030 T:Azure.ResourceManager.AppContainers.Models.AppResiliencyCollection
+nowarn:AZC0030 T:Azure.ResourceManager.AppContainers.Models.ContainerAppCollection
+nowarn:AZC0030 T:Azure.ResourceManager.AppContainers.Models.ContainerAppsFunctionCollection
+nowarn:AZC0030 T:Azure.ResourceManager.AppContainers.Models.SessionPoolCollection
+
+# The hidden SkuName compatibility property intentionally retains its obsolete
+# model type so existing consumers continue to compile.
+nowarn:CS0618 P:Azure.ResourceManager.AppContainers.ContainerAppManagedEnvironmentData.SkuName

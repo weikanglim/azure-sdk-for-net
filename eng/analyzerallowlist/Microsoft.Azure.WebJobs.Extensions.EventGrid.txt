@@ -1,0 +1,6 @@
+# Microsoft.Azure.WebJobs.Extensions.EventGrid approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# ExtensionConfigContext.GetWebhookHandler is an obsolete WebJobs host contract,
+# but this extension still requires it to register its established webhook.
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.EventGrid.Config.EventGridExtensionConfigProvider

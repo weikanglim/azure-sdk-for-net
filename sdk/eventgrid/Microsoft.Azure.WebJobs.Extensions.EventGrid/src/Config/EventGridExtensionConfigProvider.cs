@@ -62,9 +62,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.EventGrid.Config
 
             _logger = _loggerFactory.CreateLogger<EventGridExtensionConfigProvider>();
 
-#pragma warning disable 618
             Uri url = context.GetWebhookHandler();
-#pragma warning restore 618
             _logger.LogInformation($"registered EventGrid Endpoint = {url?.GetLeftPart(UriPartial.Path)}");
 
             // Register our extension binding providers

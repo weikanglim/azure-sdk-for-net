@@ -8,9 +8,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.AuthenticationEvents
 {
     /// <summary>Authentication Event Trigger that will trigger incoming authentication events.</summary>
     [AttributeUsage(AttributeTargets.Parameter)]
-#pragma warning disable CS0618 // Type or member is obsolete
     [Binding(TriggerHandlesReturnValue = true)]
-#pragma warning restore CS0618 // Type or member is obsolete
 
     public class WebJobsAuthenticationEventsTriggerAttribute : Attribute
     {

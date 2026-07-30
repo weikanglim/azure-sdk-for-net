@@ -1,0 +1,7 @@
+# Microsoft.Azure.WebJobs.Extensions.EventHubs approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# The WebJobs host trigger contracts used by these binding types are obsolete,
+# but remain required to preserve compatibility with the established extension.
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.EventHubs.EventHubTriggerBindingStrategy
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.EventHubs.EventHubTriggerAttributeBindingProvider

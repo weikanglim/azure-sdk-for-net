@@ -1,0 +1,6 @@
+# Azure.ResourceManager.Billing approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# Request-suffixed models retain service-defined Billing API names that cannot
+# be changed without breaking the shipped public surface.
+nowarn:AZC0030 N:Azure.ResourceManager.Billing.Models

@@ -75,9 +75,7 @@ namespace Microsoft.Azure.WebJobs.EventHubs
                                                 _drainModeManager);
                  return Task.FromResult(listener);
              };
-#pragma warning disable 618
             ITriggerBinding binding = BindingFactory.GetTriggerBinding(new EventHubTriggerBindingStrategy(), parameter, _converterManager, createListener);
-#pragma warning restore 618
             ITriggerBinding eventHubTriggerBindingWrapper = new EventHubTriggerBindingWrapper(binding);
             return Task.FromResult(eventHubTriggerBindingWrapper);
         }

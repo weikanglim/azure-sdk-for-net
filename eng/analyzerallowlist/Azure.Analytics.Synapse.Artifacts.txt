@@ -1,0 +1,15 @@
+# Azure.Analytics.Synapse.Artifacts approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These single-word model names are established Synapse service concepts and
+# cannot be renamed without breaking the shipped public surface.
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Expression
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Transformation
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Trigger
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Activity
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Dataset
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Notebook
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Workspace
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Resource
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Sku
+nowarn:AZC0012 T:Azure.Analytics.Synapse.Artifacts.Models.Flowlet

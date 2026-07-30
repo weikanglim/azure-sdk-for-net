@@ -4,3 +4,7 @@
 # 'DetectedLanguage' is the natural domain name and matches the shipped
 # Azure.AI.TextAnalytics surface; the two packages are never referenced together.
 nowarn:AZC0034 T:Azure.AI.Translation.Text.DetectedLanguage
+
+# Single-word model names are established Translator API contract names and
+# cannot be renamed without breaking the shipped public surface.
+nowarn:AZC0012 N:Azure.AI.Translation.Text

@@ -1,0 +1,10 @@
+# Microsoft.Azure.WebJobs.Extensions.AuthenticationEvents approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# This is a WebJobs context DTO rather than a service client; its Client suffix
+# causes AZC0007 to misclassify it, so no connection constructor is appropriate.
+nowarn:AZC0007 T:Microsoft.Azure.WebJobs.Extensions.AuthenticationEvents.TokenIssuanceStart.WebJobsAuthenticationEventsContextClient
+
+# The obsolete WebJobs BindingAttribute remains required for the extension's
+# established trigger attribute contract.
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.AuthenticationEvents.WebJobsAuthenticationEventsTriggerAttribute
