@@ -1,0 +1,7 @@
+# Azure.Communication.Identity approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These names are consistent with the established Communication Identity API.
+nowarn:AZC0030 T:Azure.Communication.Identity.Models.EntraAssignmentCreateOrUpdateRequest
+nowarn:AZC0030 T:Azure.Communication.Identity.Models.EntraAssignmentsResponse
+nowarn:AZC0030 T:Azure.Communication.Identity.Models.TeamsExtensionAssignmentResponse

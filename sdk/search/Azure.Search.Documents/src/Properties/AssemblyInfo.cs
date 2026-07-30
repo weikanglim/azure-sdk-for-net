@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using Azure.Core;
 
@@ -24,9 +23,3 @@ using Azure.Core;
     "195b7667bb4f64bcb8e2121380fd1d9d46ad2d92d2d1560509" +
     "3924cceaf74c4861eff62abf69b9291ed0a340e113be11e6a7" +
     "d3113e92484cf7045cc7")]
-
-[assembly: SuppressMessage("Usage", "AZC0012:Avoid single word type names", Justification = "Search service terminology", Scope = "type", Target = "~T:Azure.Search.Documents.Models.Analyzer")]
-[assembly: SuppressMessage("Usage", "AZC0012:Avoid single word type names", Justification = "Search service terminology", Scope = "type", Target = "~T:Azure.Search.Documents.Models.Skill")]
-[assembly: SuppressMessage("Usage", "AZC0012:Avoid single word type names", Justification = "Search service terminology", Scope = "type", Target = "~T:Azure.Search.Documents.Models.Skillset")]
-[assembly: SuppressMessage("Usage", "AZC0012:Avoid single word type names", Justification = "Search service terminology", Scope = "type", Target = "~T:Azure.Search.Documents.Models.Suggester")]
-[assembly: SuppressMessage("Usage", "AZC0012:Avoid single word type names", Justification = "Search service terminology", Scope = "type", Target = "~T:Azure.Search.Documents.Models.Tokenizer")]

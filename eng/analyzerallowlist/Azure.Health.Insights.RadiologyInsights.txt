@@ -1,0 +1,8 @@
+# Azure.Health.Insights.RadiologyInsights approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These model names reflect established Radiology Insights terminology.
+nowarn:AZC0030 T:Azure.Health.Insights.RadiologyInsights.FindingOptions
+nowarn:AZC0030 T:Azure.Health.Insights.RadiologyInsights.RadiologyInsightsInferenceOptions
+nowarn:AZC0012 T:Azure.Health.Insights.RadiologyInsights.Encounter
+nowarn:AZC0030 T:Azure.Health.Insights.RadiologyInsights.FollowupRecommendationOptions

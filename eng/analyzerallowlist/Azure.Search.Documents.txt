@@ -1,0 +1,10 @@
+# Azure.Search.Documents approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These concise names are established Azure AI Search terminology in the
+# shipping API; renaming them would be a breaking change.
+nowarn:AZC0012 T:Azure.Search.Documents.Models.Analyzer
+nowarn:AZC0012 T:Azure.Search.Documents.Models.Skill
+nowarn:AZC0012 T:Azure.Search.Documents.Models.Skillset
+nowarn:AZC0012 T:Azure.Search.Documents.Models.Suggester
+nowarn:AZC0012 T:Azure.Search.Documents.Models.Tokenizer

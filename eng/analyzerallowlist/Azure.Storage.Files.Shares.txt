@@ -1,0 +1,9 @@
+# Azure.Storage.Files.Shares approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These helper methods aggregate multiple service requests and intentionally
+# return CloseHandlesResult rather than a standard HTTP response shape.
+nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareDirectoryClient.ForceCloseAllHandles(System.Nullable{System.Boolean},System.Threading.CancellationToken)~Azure.Storage.Files.Shares.Models.CloseHandlesResult
+nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareDirectoryClient.ForceCloseAllHandlesAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)~System.Threading.Tasks.Task{Azure.Storage.Files.Shares.Models.CloseHandlesResult}
+nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareFileClient.ForceCloseAllHandles(System.Threading.CancellationToken)~Azure.Storage.Files.Shares.Models.CloseHandlesResult
+nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareFileClient.ForceCloseAllHandlesAsync(System.Threading.CancellationToken)~System.Threading.Tasks.Task{Azure.Storage.Files.Shares.Models.CloseHandlesResult}

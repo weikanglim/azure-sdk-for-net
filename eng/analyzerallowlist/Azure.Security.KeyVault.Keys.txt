@@ -1,0 +1,6 @@
+# Azure.Security.KeyVault.Keys approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# CryptographyClient performs some cryptographic operations locally, so its
+# established methods intentionally do not always use HTTP response types.
+nowarn:AZC0015 T:Azure.Security.KeyVault.Keys.Cryptography.CryptographyClient
