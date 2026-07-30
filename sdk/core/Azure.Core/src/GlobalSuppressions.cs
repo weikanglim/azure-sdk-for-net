@@ -9,4 +9,3 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Usage", "AZC0008:ClientOptions should have a nested enum called ServiceVersion", Justification = "<Pending>", Scope = "type", Target = "~T:Azure.Core.ClientOptions")]
-[assembly: SuppressMessage("Usage", "AZC0014:Avoid using banned types in public API", Justification = "<Pending>", Scope = "member", Target = "~M:Azure.Core.Serialization.JsonObjectSerializer.#ctor(System.Text.Json.JsonSerializerOptions)")]

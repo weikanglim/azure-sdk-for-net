@@ -24,7 +24,6 @@ namespace Azure.Identity
     /// </summary>
     [Obsolete("This credential is deprecated. Consider using other dev tool credentials, such as VisualStudioCredential.")]
     [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0034 // Type moved from Azure.Identity to Azure.Core; name conflict with NuGet Azure.Identity is expected
     [UnsupportedOSPlatform("browser")]
     [TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]
     public class SharedTokenCacheCredential : TokenCredential
@@ -231,5 +230,4 @@ namespace Azure.Identity
             return string.Format(CultureInfo.InvariantCulture, MultipleMatchingAccountsInCacheMessage, usernameStr, tenantIdStr);
         }
     }
-#pragma warning restore AZC0034
 }

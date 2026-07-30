@@ -94,9 +94,7 @@ namespace Azure.Identity
             AzureIdentityEventSource.Singleton.ManagedIdentityCredentialSelected(capabilities.Source.ToString(), _options.ManagedIdentityId.ToString());
 
             // If the source is DefaultToImds and the credential is chained, we should probe the IMDS endpoint first.
-#pragma warning disable CS0618 // DefaultToImds is obsolete but still returned by the sync GetManagedIdentitySource path
             if ((capabilities.Source == MSAL.ManagedIdentitySource.DefaultToImds || capabilities.Source == MSAL.ManagedIdentitySource.Imds) && _isChainedCredential && !_probeRequestSent)
-#pragma warning restore CS0618
             {
                 var probedFlowTokenResult = await AuthenticateCoreAsync(async, context, cancellationToken).ConfigureAwait(false);
                 _probeRequestSent = true;

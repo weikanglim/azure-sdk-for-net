@@ -60,3 +60,32 @@ nowarn:AZC0034 T:Azure.Identity.UsernamePasswordCredential
 nowarn:AZC0034 T:Azure.Identity.VisualStudioCodeCredential
 nowarn:AZC0034 T:Azure.Identity.VisualStudioCredential
 nowarn:AZC0034 T:Azure.Identity.WorkloadIdentityCredential
+
+# These additional Azure.Identity types were moved into Azure.Core for compatibility. Their names
+# intentionally overlap the Azure.Identity package, so AZC0034 is narrowly suppressed per type.
+nowarn:AZC0034 T:Azure.Identity.BrowserCustomizationOptions
+nowarn:AZC0034 T:Azure.Identity.ClientAssertionCredential
+nowarn:AZC0034 T:Azure.Identity.ClientSecretCredential
+nowarn:AZC0034 T:Azure.Identity.CredentialUnavailableException
+nowarn:AZC0034 T:Azure.Identity.DeviceCodeCredential
+nowarn:AZC0034 T:Azure.Identity.InteractiveBrowserCredentialOptions
+nowarn:AZC0034 T:Azure.Identity.ManagedIdentityCredential
+nowarn:AZC0034 T:Azure.Identity.SharedTokenCacheCredential
+nowarn:AZC0034 T:Azure.Identity.TokenCachePersistenceOptions
+nowarn:AZC0034 T:Azure.Identity.TokenCredentialDiagnosticsOptions
+nowarn:AZC0034 T:Azure.Identity.TokenCredentialOptions
+
+# These established JSON APIs expose System.Text.Json types for compatibility, so AZC0014 is
+# suppressed only on the affected constructor and methods.
+nowarn:AZC0014 M:Azure.Core.DynamicData.MutableJsonDocument.WriteTo(System.Text.Json.Utf8JsonWriter)
+nowarn:AZC0014 M:Azure.Core.JsonPatchDocument.WriteTo(System.Text.Json.Utf8JsonWriter)
+nowarn:AZC0014 M:Azure.Core.Serialization.JsonObjectSerializer.#ctor(System.Text.Json.JsonSerializerOptions)
+
+# Compatibility code must continue calling obsolete credential and MSAL APIs. Types with multiple
+# call sites use a type scope; isolated calls are suppressed on their exact containing members.
+nowarn:CS0618 T:Azure.Identity.BrowserCustomizationOptions
+nowarn:CS0618 T:Azure.Identity.DefaultAzureCredentialFactory
+nowarn:CS0618 T:Azure.Identity.DefaultAzureCredentialOptions
+nowarn:CS0618 T:Azure.Identity.MsalPublicClient
+nowarn:CS0618 M:Azure.Identity.EnvironmentCredential.#ctor(Azure.Identity.CredentialPipeline,Azure.Identity.TokenCredentialOptions)
+nowarn:CS0618 M:Azure.Identity.ManagedIdentityClient.AuthenticateAsync(System.Boolean,Azure.Core.TokenRequestContext,System.Threading.CancellationToken)

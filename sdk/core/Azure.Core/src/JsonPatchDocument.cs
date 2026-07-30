@@ -184,9 +184,7 @@ namespace Azure
         /// Writes the document to a <see cref="Utf8JsonWriter"/> in JSON Path format.
         /// </summary>
         /// <param name="writer">The <see cref="Utf8JsonWriter"/> instance to write this document to</param>
-#pragma warning disable AZC0014 // do not expose Json types in public APIs
         private void WriteTo(Utf8JsonWriter writer)
-#pragma warning restore AZC0014
         {
             writer.WriteStartArray();
             if (!_rawDocument.IsEmpty)

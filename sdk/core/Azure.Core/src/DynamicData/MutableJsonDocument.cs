@@ -126,9 +126,7 @@ namespace Azure.Core.Json
         /// </summary>
         /// <param name="writer">The writer to which to write the document.</param>
         /// <exception cref="ArgumentNullException">The <paramref name="writer"/> parameter is <see langword="null"/>.</exception>
-#pragma warning disable AZC0014 // Avoid using banned types in public API
         public void WriteTo(Utf8JsonWriter writer)
-#pragma warning restore AZC0014 // Avoid using banned types in public API
         {
             Argument.AssertNotNull(writer, nameof(writer));
 

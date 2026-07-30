@@ -15,7 +15,6 @@ namespace Azure.Identity
     /// <summary>
     /// Options to customize browser view.
     /// </summary>
-#pragma warning disable AZC0034 // Type moved from Azure.Identity to Azure.Core; name conflict with NuGet Azure.Identity is expected
     [TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]
     public class BrowserCustomizationOptions
     {
@@ -38,12 +37,10 @@ namespace Azure.Identity
             {
                 ErrorMessage = errorMessage;
             }
-#pragma warning disable CS0618 // Type or member is obsolete
             if (bool.TryParse(section[nameof(UseEmbeddedWebView)], out bool useEmbeddedWebView))
             {
                 UseEmbeddedWebView = useEmbeddedWebView;
             }
-#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
@@ -106,12 +103,9 @@ namespace Azure.Identity
             {
                 ErrorMessage = ErrorMessage,
                 SuccessMessage = SuccessMessage,
-#pragma warning disable CS0618 // Type or member is obsolete
                 UseEmbeddedWebView = UseEmbeddedWebView ?? false
-#pragma warning restore CS0618 // Type or member is obsolete
             };
             return clone;
         }
     }
-#pragma warning restore AZC0034
 }

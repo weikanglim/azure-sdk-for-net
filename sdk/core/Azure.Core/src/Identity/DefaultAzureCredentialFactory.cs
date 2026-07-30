@@ -119,12 +119,10 @@ namespace Azure.Identity
             {
                 chain.Add(CreateManagedIdentityCredential());
             }
-#pragma warning disable CS0618 // Type of member is obsolete
             if (!Options.ExcludeSharedTokenCacheCredential)
             {
                 chain.Add(CreateSharedTokenCacheCredential());
             }
-#pragma warning restore CS0618
 
             if (!Options.ExcludeVisualStudioCredential)
             {
@@ -398,7 +396,6 @@ namespace Azure.Identity
 
         public virtual TokenCredential CreateSharedTokenCacheCredential()
         {
-#pragma warning disable CS0618 // Type or member is obsolete
             var options = Options.Clone<SharedTokenCacheCredentialOptions>();
 
             options.TenantId = Options.SharedTokenCacheTenantId;
@@ -406,7 +403,6 @@ namespace Azure.Identity
             options.Username = Options.SharedTokenCacheUsername;
 
             return new SharedTokenCacheCredential(Options.SharedTokenCacheTenantId, Options.SharedTokenCacheUsername, options, Pipeline);
-#pragma warning restore CS0618
         }
 
         public virtual TokenCredential CreateInteractiveBrowserCredential()
