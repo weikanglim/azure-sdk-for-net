@@ -1,0 +1,9 @@
+# Azure.Storage.Files.DataLake approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# DataLakeFileClient exposes intentional streaming helpers that return Stream
+# or Task<Stream> rather than standard response shapes.
+nowarn:AZC0015 T:Azure.Storage.Files.DataLake.DataLakeFileClient
+
+# Shared client-side encryption code intentionally uses obsolete V1 APIs to read legacy data.
+nowarn:CS0618 T:Azure.Storage.Shared.StorageExtensions

@@ -13,3 +13,6 @@ nowarn:AZC0015
 
 # The netstandard compatibility implementation uses the framework's obsolete in-place builder.
 nowarn:CS0618 T:Azure.Core.Http.Multipart.StringValues
+
+# Shared client-side encryption code intentionally uses obsolete V1 APIs to read legacy data.
+nowarn:CS0618 T:Azure.Storage.Shared.StorageExtensions

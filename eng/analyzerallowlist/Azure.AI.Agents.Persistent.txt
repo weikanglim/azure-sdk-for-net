@@ -1,0 +1,6 @@
+# Azure.AI.Agents.Persistent approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# ThreadRuns exposes intentional streaming operations that return collection
+# result types rather than standard response shapes.
+nowarn:AZC0015 T:Azure.AI.Agents.Persistent.ThreadRuns

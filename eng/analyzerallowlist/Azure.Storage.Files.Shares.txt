@@ -5,5 +5,10 @@
 # return CloseHandlesResult rather than a standard HTTP response shape.
 nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareDirectoryClient.ForceCloseAllHandles(System.Nullable{System.Boolean},System.Threading.CancellationToken)~Azure.Storage.Files.Shares.Models.CloseHandlesResult
 nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareDirectoryClient.ForceCloseAllHandlesAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)~System.Threading.Tasks.Task{Azure.Storage.Files.Shares.Models.CloseHandlesResult}
-nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareFileClient.ForceCloseAllHandles(System.Threading.CancellationToken)~Azure.Storage.Files.Shares.Models.CloseHandlesResult
-nowarn:AZC0015 M:Azure.Storage.Files.Shares.ShareFileClient.ForceCloseAllHandlesAsync(System.Threading.CancellationToken)~System.Threading.Tasks.Task{Azure.Storage.Files.Shares.Models.CloseHandlesResult}
+
+# ShareFileClient exposes intentional streaming helpers that return Stream or
+# Task<Stream>, in addition to aggregate close-handle helpers.
+nowarn:AZC0015 T:Azure.Storage.Files.Shares.ShareFileClient
+
+# Shared client-side encryption code intentionally uses obsolete V1 APIs to read legacy data.
+nowarn:CS0618 T:Azure.Storage.Shared.StorageExtensions

@@ -2876,9 +2876,7 @@ namespace Azure.Storage.Files.Shares
         ///
         /// A <see cref="RequestFailedException" /> will be thrown if other failures occur.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             ShareFileOpenReadOptions options,
             CancellationToken cancellationToken = default)
             => OpenReadInteral(
@@ -2911,9 +2909,7 @@ namespace Azure.Storage.Files.Shares
         ///
         /// A <see cref="RequestFailedException" /> will be thrown if other failures occur.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             ShareFileOpenReadOptions options,
             CancellationToken cancellationToken = default)
             => await OpenReadInteral(
@@ -2956,9 +2952,7 @@ namespace Azure.Storage.Files.Shares
         /// A <see cref="RequestFailedException" /> will be thrown if other failures occur.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             long position = 0,
             int? bufferSize = default,
             ShareFileRequestConditions conditions = default,
@@ -3002,9 +2996,7 @@ namespace Azure.Storage.Files.Shares
         /// A <see cref="RequestFailedException" /> will be thrown if other failures occur.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool allowfileModifications,
             long position = 0,
             int? bufferSize = default,
@@ -3049,9 +3041,7 @@ namespace Azure.Storage.Files.Shares
         /// A <see cref="RequestFailedException" /> will be thrown if other failures occur.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             long position = 0,
             int? bufferSize = default,
             ShareFileRequestConditions conditions = default,
@@ -3095,9 +3085,7 @@ namespace Azure.Storage.Files.Shares
         /// A <see cref="RequestFailedException" /> will be thrown if other failures occur.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool allowfileModifications,
             long position = 0,
             int? bufferSize = default,
@@ -7810,9 +7798,7 @@ namespace Azure.Storage.Files.Shares
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenWrite(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             long position,
             ShareFileOpenWriteOptions options = default,
@@ -7850,9 +7836,7 @@ namespace Azure.Storage.Files.Shares
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenWriteAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             long position,
             ShareFileOpenWriteOptions options = default,

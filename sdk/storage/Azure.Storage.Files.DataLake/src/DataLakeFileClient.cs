@@ -5677,9 +5677,7 @@ namespace Azure.Storage.Files.DataLake
         /// a failure occurs.
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             DataLakeOpenReadOptions options,
             CancellationToken cancellationToken = default)
         {
@@ -5721,9 +5719,7 @@ namespace Azure.Storage.Files.DataLake
         /// a failure occurs.
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             DataLakeOpenReadOptions options,
             CancellationToken cancellationToken = default)
         {
@@ -5775,9 +5771,7 @@ namespace Azure.Storage.Files.DataLake
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             long position = 0,
             int? bufferSize = default,
             DataLakeRequestConditions conditions = default,
@@ -5832,9 +5826,7 @@ namespace Azure.Storage.Files.DataLake
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool allowfileModifications,
             long position = 0,
             int? bufferSize = default,
@@ -5892,9 +5884,7 @@ namespace Azure.Storage.Files.DataLake
         /// containing each failure instance.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             long position = 0,
             int? bufferSize = default,
             DataLakeRequestConditions conditions = default,
@@ -5949,9 +5939,7 @@ namespace Azure.Storage.Files.DataLake
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool allowfileModifications,
             long position = 0,
             int? bufferSize = default,
@@ -6002,9 +5990,7 @@ namespace Azure.Storage.Files.DataLake
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenWrite(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             DataLakeFileOpenWriteOptions options = default,
             CancellationToken cancellationToken = default)
@@ -6037,9 +6023,7 @@ namespace Azure.Storage.Files.DataLake
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenWriteAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             DataLakeFileOpenWriteOptions options = default,
             CancellationToken cancellationToken = default)

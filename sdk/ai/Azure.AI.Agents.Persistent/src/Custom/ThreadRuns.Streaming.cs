@@ -57,9 +57,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="threadId"/> or <paramref name="agentId"/> is null. </exception>
         /// <exception cref="ArgumentException"> <paramref name="threadId"/> is an empty string, and was expected to be non-empty. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual AsyncCollectionResult<StreamingUpdate> CreateRunStreamingAsync(string threadId, string agentId, string overrideModelName = null, string overrideInstructions = null, string additionalInstructions = null, IEnumerable<ThreadMessageOptions> additionalMessages = null, IEnumerable<ToolDefinition> overrideTools = null, float? temperature = null, float? topP = null, int? maxPromptTokens = null, int? maxCompletionTokens = null, Truncation truncationStrategy = null, BinaryData toolChoice = null, BinaryData responseFormat = null, bool? parallelToolCalls = null, IReadOnlyDictionary<string, string> metadata = null, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             CreateRunStreamingOptions opts = new()
             {
@@ -97,9 +95,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="threadId"/> or <paramref name="agentId"/> is null. </exception>
         /// <exception cref="ArgumentException"> <paramref name="threadId"/> is an empty string, and was expected to be non-empty. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual AsyncCollectionResult<StreamingUpdate> CreateRunStreamingAsync(string threadId, string agentId, CreateRunStreamingOptions options, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             var scope = OpenTelemetryScope.StartCreateRunStreaming(threadId, agentId, _endpoint);
             Argument.AssertNotNullOrEmpty(threadId, nameof(threadId));
@@ -288,9 +284,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="threadId"/> or <paramref name="agentId"/> is null. </exception>
         /// <exception cref="ArgumentException"> <paramref name="threadId"/> is an empty string, and was expected to be non-empty. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual CollectionResult<StreamingUpdate> CreateRunStreaming(string threadId, string agentId, string overrideModelName = null, string overrideInstructions = null, string additionalInstructions = null, IEnumerable<ThreadMessageOptions> additionalMessages = null, IEnumerable<ToolDefinition> overrideTools = null, float? temperature = null, float? topP = null, int? maxPromptTokens = null, int? maxCompletionTokens = null, Truncation truncationStrategy = null, BinaryData toolChoice = null, BinaryData responseFormat = null, bool? parallelToolCalls = null, IReadOnlyDictionary<string, string> metadata = null, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             CreateRunStreamingOptions opts = new()
             {
@@ -326,9 +320,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="threadId"/> or <paramref name="agentId"/> is null. </exception>
         /// <exception cref="ArgumentException"> <paramref name="threadId"/> is an empty string, and was expected to be non-empty. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual CollectionResult<StreamingUpdate> CreateRunStreaming(string threadId, string agentId, CreateRunStreamingOptions options, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             var scope = OpenTelemetryScope.StartCreateRunStreaming(threadId, agentId, _endpoint);
             Argument.AssertNotNullOrEmpty(threadId, nameof(threadId));
@@ -375,9 +367,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="toolOutputs"> A list of tools for which the outputs are being submitted. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="run"/> or <paramref name="toolOutputs"/> is null. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual CollectionResult<StreamingUpdate> SubmitToolOutputsToStream(ThreadRun run, IEnumerable<ToolOutput> toolOutputs, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             Argument.AssertNotNull(run, nameof(run));
             Argument.AssertNotNull(toolOutputs, nameof(toolOutputs));
@@ -391,9 +381,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="toolApprovals">A list of tool approvals for the MCP call.</param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="run"/> or <paramref name="toolOutputs"/> is null. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual CollectionResult<StreamingUpdate> SubmitToolOutputsToStream(ThreadRun run, IEnumerable<ToolOutput> toolOutputs, IEnumerable<ToolApproval> toolApprovals, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             Argument.AssertNotNull(run, nameof(run));
             Argument.AssertNotNull(toolOutputs, nameof(toolOutputs));
@@ -409,9 +397,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="currentRetry"> The count of current retry of auto function calls.  Cancel the run if reach to the maxinum. </param>
         /// <param name="autoFunctionCallOptions">If specified, function calls defined in tools will be called automatically.</param>
         /// <exception cref="ArgumentNullException"> <paramref name="run"/> or <paramref name="toolOutputs"/> is null. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         internal virtual CollectionResult<StreamingUpdate> SubmitToolOutputsToStreamWitAutoFunctionCall(ThreadRun run, IEnumerable<ToolOutput> toolOutputs, IEnumerable<ToolApproval> toolApprovals, int currentRetry = 0, CancellationToken cancellationToken = default, AutoFunctionCallOptions autoFunctionCallOptions = null)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             var scope = OpenTelemetryScope.StartCreateRunStreaming(run.Id, run.AssistantId, _endpoint);
             Argument.AssertNotNull(run, nameof(run));
@@ -448,9 +434,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="toolOutputs"> A list of tools for which the outputs are being submitted. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="run"/> or <paramref name="toolOutputs"/> is null. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual AsyncCollectionResult<StreamingUpdate> SubmitToolOutputsToStreamAsync(ThreadRun run, IEnumerable<ToolOutput> toolOutputs, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             Argument.AssertNotNull(run, nameof(run));
             Argument.AssertNotNull(toolOutputs, nameof(toolOutputs));
@@ -464,9 +448,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="toolApprovals">A list of tool approvals for the MCP call.</param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="run"/> or <paramref name="toolOutputs"/> is null. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual AsyncCollectionResult<StreamingUpdate> SubmitToolOutputsToStreamAsync(ThreadRun run, IEnumerable<ToolOutput> toolOutputs, IEnumerable<ToolApproval> toolApprovals, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             Argument.AssertNotNull(run, nameof(run));
             Argument.AssertNotNull(toolOutputs, nameof(toolOutputs));
@@ -482,9 +464,7 @@ namespace Azure.AI.Agents.Persistent
         /// <param name="currentRetry"> The count of current retry of auto function calls.  Cancel the run if reach to the maxinum. </param>
         /// <param name="autoFunctionCallOptions">If specified, function calls defined in tools will be called automatically.</param>
         /// <exception cref="ArgumentNullException"> <paramref name="run"/> or <paramref name="toolOutputs"/> is null. </exception>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         internal virtual AsyncCollectionResult<StreamingUpdate> SubmitToolOutputsToStreamWitAutoFunctionCallAsync(ThreadRun run, IEnumerable<ToolOutput> toolOutputs, IEnumerable<ToolApproval> toolApprovals, int currentRetry = 0, CancellationToken cancellationToken = default, AutoFunctionCallOptions autoFunctionCallOptions = null)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             var scope = OpenTelemetryScope.StartCreateRunStreaming(run.Id, run.AssistantId, _endpoint);
             Argument.AssertNotNull(run, nameof(run));
