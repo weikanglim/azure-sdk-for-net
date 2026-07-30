@@ -300,10 +300,7 @@ namespace Azure.Storage.Blobs.ChangeFeed
         /// Optional <see cref="CancellationToken"/> to propagate
         /// notifications that the operation should be cancelled.
         /// </param>
-#pragma warning disable AZC0015
-
         public virtual DateTimeOffset? GetLastConsumable(CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015
         {
             BlobContainerClient containerClient = _blobServiceClient.GetBlobContainerClient(Constants.ChangeFeed.ChangeFeedContainerName);
             return ChangeFeedFactory.GetLastConsumableInternal(
@@ -320,9 +317,7 @@ namespace Azure.Storage.Blobs.ChangeFeed
         /// Optional <see cref="CancellationToken"/> to propagate
         /// notifications that the operation should be cancelled.
         /// </param>
-#pragma warning disable AZC0015
         public virtual Task<DateTimeOffset?> GetLastConsumableAsync(CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015
         {
             BlobContainerClient containerClient = _blobServiceClient.GetBlobContainerClient(Constants.ChangeFeed.ChangeFeedContainerName);
             return ChangeFeedFactory.GetLastConsumableInternal(

@@ -13,9 +13,7 @@ namespace Azure.Projects;
 /// <summary>
 /// Azure Developer CLI helpers.
 /// </summary>
-#pragma warning disable AZC0012 // Avoid single word type names
 public static class Azd
-#pragma warning restore AZC0012 // Avoid single word type names
 {
     private const string MainBicepName = "main";
     private const string ResourceGroupVersion = "2024-03-01";

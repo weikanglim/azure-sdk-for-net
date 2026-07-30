@@ -115,9 +115,7 @@ public class PlaywrightServiceBrowserClient : IDisposable
     /// <param name="exposeNetwork">The network exposure.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns>The connect options.</returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
     public virtual async Task<ConnectOptions<T>> GetConnectOptionsAsync<T>(OSPlatform? os = null, string? runId = null, string? exposeNetwork = null, CancellationToken cancellationToken = default) where T : class, new()
-#pragma warning restore AZC0015 // Unexpected client method return type.
     {
         if (string.IsNullOrEmpty(_options.ServiceEndpoint))
             throw new Exception(Constants.s_no_service_endpoint_error_message);
@@ -161,9 +159,7 @@ public class PlaywrightServiceBrowserClient : IDisposable
     /// <param name="exposeNetwork">The network exposure.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns>The connect options.</returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
     public virtual ConnectOptions<T> GetConnectOptions<T>(OSPlatform? os = null, string? runId = null, string? exposeNetwork = null, CancellationToken cancellationToken = default) where T : class, new()
-#pragma warning restore AZC0015 // Unexpected client method return type.
     {
         if (string.IsNullOrEmpty(_options.ServiceEndpoint))
             throw new Exception(Constants.s_no_service_endpoint_error_message);
@@ -201,9 +197,7 @@ public class PlaywrightServiceBrowserClient : IDisposable
     /// <summary>
     /// Initialises the resources used to setup entra id authentication.
     /// </summary>
-#pragma warning disable AZC0015 // Unexpected client method return type.
     public virtual async Task InitializeAsync(CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
     {
         if (string.IsNullOrEmpty(_options.ServiceEndpoint))
         {
@@ -228,9 +222,7 @@ public class PlaywrightServiceBrowserClient : IDisposable
     /// <summary>
     /// Initialises the resources used to setup entra id authentication.
     /// </summary>
-#pragma warning disable AZC0015 // Unexpected client method return type.
     public virtual void Initialize(CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
     {
         if (string.IsNullOrEmpty(_options.ServiceEndpoint))
         {
@@ -262,9 +254,7 @@ public class PlaywrightServiceBrowserClient : IDisposable
     /// <summary>
     /// Cleans up the resources used to setup entra id authentication.
     /// </summary>
-#pragma warning disable AZC0015 // Unexpected client method return type.
     public virtual async Task DisposeAsync()
-#pragma warning restore AZC0015 // Unexpected client method return type.
     {
         Dispose();
         await Task.CompletedTask.ConfigureAwait(false);
@@ -273,9 +263,7 @@ public class PlaywrightServiceBrowserClient : IDisposable
     /// <summary>
     /// Cleans up the resources used to setup entra id authentication.
     /// </summary>
-#pragma warning disable AZC0015 // Unexpected client method return type.
     public virtual void Dispose()
-#pragma warning restore AZC0015 // Unexpected client method return type.
     {
         _logger?.LogInformation("Cleaning up Playwright Workspaces resources.");
         RotationTimer?.Dispose();

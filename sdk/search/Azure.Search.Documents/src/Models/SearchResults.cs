@@ -23,7 +23,6 @@ namespace Azure.Search.Documents.Models
     /// <summary>
     /// Response containing search results from an index.
     /// </summary>
-    [SuppressMessage("Usage", "AZC0035:Output model type 'SearchResults' should have a corresponding method in a model factory class.", Justification = "Model factory method exists in SearchModelFactory but analyzer isn’t recognizing it")]
     public abstract class SearchResults<T>
     {
         /// <summary>

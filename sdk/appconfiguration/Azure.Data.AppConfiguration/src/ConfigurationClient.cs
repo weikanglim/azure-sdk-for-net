@@ -15,8 +15,6 @@ using Azure.Core.Pipeline;
 using Microsoft.TypeSpec.Generator.Customizations;
 using static Azure.Core.Pipeline.TaskExtensions;
 
-#pragma warning disable AZC0007
-
 namespace Azure.Data.AppConfiguration
 {
     // CUSTOM:

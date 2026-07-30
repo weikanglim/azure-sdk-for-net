@@ -1,0 +1,3 @@
+# Azure.Security.KeyVault.Certificates approved analyzer suppressions.
+# Download methods intentionally return the platform X509Certificate2 representation.
+nowarn:AZC0015 T:Azure.Security.KeyVault.Certificates.CertificateClient

@@ -1,0 +1,3 @@
+# Azure.Developer.Playwright approved analyzer suppressions.
+# This integration client intentionally exposes Playwright lifecycle and connection types.
+nowarn:AZC0015 T:Azure.Developer.Playwright.PlaywrightServiceBrowserClient

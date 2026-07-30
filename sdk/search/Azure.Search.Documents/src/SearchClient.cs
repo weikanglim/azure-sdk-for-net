@@ -1062,9 +1062,7 @@ namespace Azure.Search.Documents
         /// </remarks>
         public virtual Response<SearchResults<T>> Search<T>(
             string searchText,
-#pragma warning disable AZC0014 // Avoid using banned types in public API
             JsonTypeInfo<T> typeInfo,
-#pragma warning restore AZC0014 // Avoid using banned types in public API
             SearchOptions options = null,
             CancellationToken cancellationToken = default) =>
             SearchInternal<T>(
@@ -1124,9 +1122,7 @@ namespace Azure.Search.Documents
         /// </remarks>
         public async virtual Task<Response<SearchResults<T>>> SearchAsync<T>(
             string searchText,
-#pragma warning disable AZC0014 // Avoid using banned types in public API
             JsonTypeInfo<T> typeInfo,
-#pragma warning restore AZC0014 // Avoid using banned types in public API
             SearchOptions options = null,
             CancellationToken cancellationToken = default) =>
             await SearchInternal<T>(

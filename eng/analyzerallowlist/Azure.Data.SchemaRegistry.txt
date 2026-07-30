@@ -1,0 +1,3 @@
+# Azure.Data.SchemaRegistry approved analyzer suppressions.
+# Existing schema lookup methods preserve their GA response types.
+nowarn:AZC0015 T:Azure.Data.SchemaRegistry.SchemaRegistryClient

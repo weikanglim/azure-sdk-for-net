@@ -1,0 +1,3 @@
+# Azure.Data.AppConfiguration approved analyzer suppressions.
+# The established client predates the current constructor-overload guidance.
+nowarn:AZC0007 T:Azure.Data.AppConfiguration.ConfigurationClient

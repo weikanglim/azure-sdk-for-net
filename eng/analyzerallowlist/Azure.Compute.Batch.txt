@@ -1,0 +1,7 @@
+# Azure.Compute.Batch approved analyzer suppressions.
+# Bulk task creation intentionally returns an aggregate result rather than Response<T>.
+nowarn:AZC0015 M:Azure.Compute.Batch.BatchClient.CreateTasksAsync(System.String,System.Collections.Generic.IEnumerable{Azure.Compute.Batch.BatchTaskCreateOptions},Azure.Compute.Batch.CreateTasksOptions,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)
+nowarn:AZC0015 M:Azure.Compute.Batch.BatchClient.CreateTasks(System.String,System.Collections.Generic.IEnumerable{Azure.Compute.Batch.BatchTaskCreateOptions},Azure.Compute.Batch.CreateTasksOptions,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)
+
+# ExitOptions is an established service model name approved during SDK review.
+nowarn:AZC0030 N:Azure.Compute.Batch

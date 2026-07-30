@@ -256,7 +256,6 @@ namespace Azure.Security.KeyVault.Certificates
         // Behavior, diagnostic scope name, OTel attributes, and the on-the-wire request
         // shape are preserved exactly as shipped in prior 4.x releases.
 
-#pragma warning disable AZC0015 // Unexpected client method return type.
 #pragma warning disable AZC0002 // Client method should have an optional CancellationToken.
         /// <summary>
         /// Creates an <see cref="X509Certificate2"/> from the specified certificate.
@@ -540,7 +539,6 @@ namespace Azure.Security.KeyVault.Certificates
                 throw;
             }
         }
-#pragma warning restore AZC0015 // Unexpected client method return type.
 
         #endregion
 

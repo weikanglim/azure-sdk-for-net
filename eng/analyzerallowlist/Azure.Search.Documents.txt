@@ -8,3 +8,11 @@ nowarn:AZC0012 T:Azure.Search.Documents.Models.Skill
 nowarn:AZC0012 T:Azure.Search.Documents.Models.Skillset
 nowarn:AZC0012 T:Azure.Search.Documents.Models.Suggester
 nowarn:AZC0012 T:Azure.Search.Documents.Models.Tokenizer
+
+# These overloads intentionally accept JsonTypeInfo for AOT-safe result deserialization.
+nowarn:AZC0014 M:Azure.Search.Documents.SearchClient.Search``1(System.String,System.Text.Json.Serialization.Metadata.JsonTypeInfo{``0},Azure.Search.Documents.SearchOptions,System.Threading.CancellationToken)
+nowarn:AZC0014 M:Azure.Search.Documents.SearchClient.SearchAsync``1(System.String,System.Text.Json.Serialization.Metadata.JsonTypeInfo{``0},Azure.Search.Documents.SearchOptions,System.Threading.CancellationToken)
+
+# SearchModelFactory already provides factory methods for these generic result models.
+nowarn:AZC0035 T:Azure.Search.Documents.Models.SearchResults`1
+nowarn:AZC0035 T:Azure.Search.Documents.Models.SuggestResults`1

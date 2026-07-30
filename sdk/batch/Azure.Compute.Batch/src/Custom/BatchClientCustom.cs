@@ -657,7 +657,6 @@ namespace Azure.Compute.Batch
         /// Task has not completed within 180 days of being added it will be terminated by
         /// the Batch service and left in whatever state it was in at that time.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<CreateTasksResult> CreateTasksAsync(string jobId, IEnumerable<BatchTaskCreateOptions> tasksToAdd, CreateTasksOptions createTasksOptions = null, TimeSpan? timeout = null, CancellationToken cancellationToken = default)
         {
             Argument.AssertNotNullOrEmpty(jobId, nameof(jobId));
@@ -721,7 +720,6 @@ namespace Azure.Compute.Batch
 
             return response;
         }
-#pragma warning restore AZC0015
 
         // The convenience method is omitted here because it has exactly the same parameter list as the corresponding protocol method
         /// <summary>

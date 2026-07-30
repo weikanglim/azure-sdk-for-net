@@ -1,0 +1,7 @@
+# Azure.Projects.Provisioning approved analyzer suppressions.
+# Azd intentionally mirrors the established Azure Developer CLI product name.
+nowarn:AZC0012 T:Azure.Projects.Azd
+
+# ProjectClient intentionally supports configuration-based construction with either credential type.
+nowarn:AZC0007 M:Azure.Projects.ProjectClient.#ctor(Azure.Identity.DefaultAzureCredential,Microsoft.Extensions.Configuration.IConfiguration)
+nowarn:AZC0007 M:Azure.Projects.ProjectClient.#ctor(Azure.Core.TokenCredential,Microsoft.Extensions.Configuration.IConfiguration)

@@ -178,14 +178,12 @@ namespace Azure.Data.SchemaRegistry
         /// string will be returned as the value of the <see cref="SchemaProperties.Format"/>
         /// for the returned Schema.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Response<SchemaProperties>> GetSchemaPropertiesAsync(
             string groupName,
             string schemaName,
             string schemaDefinition,
             SchemaFormat format,
             CancellationToken cancellationToken = default) =>
-#pragma warning restore AZC0015 // Unexpected client method return type.
                 await GetSchemaPropertiesInternalAsync(groupName, schemaName, schemaDefinition, format, true, cancellationToken)
                     .ConfigureAwait(false);
 
@@ -204,14 +202,12 @@ namespace Azure.Data.SchemaRegistry
         /// string will be returned as the value of the <see cref="SchemaProperties.Format"/>
         /// for the returned Schema.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Response<SchemaProperties> GetSchemaProperties(
             string groupName,
             string schemaName,
             string schemaDefinition,
             SchemaFormat format,
             CancellationToken cancellationToken = default) =>
-#pragma warning restore AZC0015 // Unexpected client method return type.
                 GetSchemaPropertiesInternalAsync(groupName, schemaName, schemaDefinition, format, false, cancellationToken).EnsureCompleted();
 
         private async Task<Response<SchemaProperties>> GetSchemaPropertiesInternalAsync(
@@ -266,9 +262,7 @@ namespace Azure.Data.SchemaRegistry
         /// string will be returned as the value of the <see cref="SchemaProperties.Format"/>
         /// for the returned <see cref="SchemaRegistrySchema.Properties"/>.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Response<SchemaRegistrySchema>> GetSchemaAsync(string schemaId, CancellationToken cancellationToken = default) =>
-#pragma warning restore AZC0015 // Unexpected client method return type.
             await GetSchemaInternalAsync(schemaId, true, cancellationToken).ConfigureAwait(false);
 
         /// <summary>
@@ -285,9 +279,7 @@ namespace Azure.Data.SchemaRegistry
         /// string will be returned as the value of the <see cref="SchemaProperties.Format"/>
         /// for the returned <see cref="SchemaRegistrySchema.Properties"/>.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Response<SchemaRegistrySchema>> GetSchemaAsync(string groupName, string schemaName, int schemaVersion, CancellationToken cancellationToken = default) =>
-#pragma warning restore AZC0015 // Unexpected client method return type.
             await GetSchemaInternalAsync(groupName, schemaName, schemaVersion, true, cancellationToken).ConfigureAwait(false);
 
         /// <summary>
@@ -302,9 +294,7 @@ namespace Azure.Data.SchemaRegistry
         /// string will be returned as the value of the <see cref="SchemaProperties.Format"/>
         /// for the returned <see cref="SchemaRegistrySchema.Properties"/>.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Response<SchemaRegistrySchema> GetSchema(string schemaId, CancellationToken cancellationToken = default) =>
-#pragma warning restore AZC0015 // Unexpected client method return type.
             GetSchemaInternalAsync(schemaId, false, cancellationToken).EnsureCompleted();
 
         /// <summary>
@@ -321,9 +311,7 @@ namespace Azure.Data.SchemaRegistry
         /// string will be returned as the value of the <see cref="SchemaProperties.Format"/>
         /// for the returned <see cref="SchemaRegistrySchema.Properties"/>.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Response<SchemaRegistrySchema> GetSchema(string groupName, string schemaName, int schemaVersion, CancellationToken cancellationToken = default) =>
-#pragma warning restore AZC0015 // Unexpected client method return type.
             GetSchemaInternalAsync(groupName, schemaName, schemaVersion, false, cancellationToken).EnsureCompleted();
 
         private async Task<Response<SchemaRegistrySchema>> GetSchemaInternalAsync(string groupName, string schemaName, int version, bool async, CancellationToken cancellationToken)
