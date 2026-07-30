@@ -7,12 +7,11 @@ using Azure.Core.Pipeline;
 
 namespace Azure.AI.VoiceLive
 {
-#pragma warning disable AZC0015, AZC0107 // Client methods should return approved types
+#pragma warning disable AZC0107 // Client methods should return approved types
     public partial class VoiceLiveClient
     {
         internal VoiceLiveClientOptions Options { get; set; }
 
-#pragma warning disable AZC0007 // A websocket based client cannot use the pipeline provided by the typical options class, and showing it will cause confusion.
         /// <summary> Initializes a new instance of VoiceLiveClient. </summary>
         /// <param name="endpoint"> Service endpoint. </param>
         /// <param name="credential"> A credential used to authenticate to the service. </param>
@@ -48,6 +47,5 @@ namespace Azure.AI.VoiceLive
             Options = options;
             ClientDiagnostics = new ClientDiagnostics(options, true);
         }
-#pragma warning restore AZC0007 // A websocket based client cannot use the pipeline provided by the typical options class, and showing it will cause confusion.
     }
 }

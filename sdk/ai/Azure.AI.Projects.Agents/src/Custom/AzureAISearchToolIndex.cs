@@ -3,8 +3,6 @@
 
 #nullable disable
 
-#pragma warning disable OPENAI001
-
 namespace Azure.AI.Projects.Agents;
 
 [CodeGenType("AISearchIndexResource")]

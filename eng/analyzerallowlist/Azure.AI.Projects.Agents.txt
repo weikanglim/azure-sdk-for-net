@@ -11,6 +11,11 @@
 # assembly level matches intent.
 nowarn:OPENAI001
 
+# AgentAdministrationClient intentionally follows System.ClientModel response and
+# constructor patterns rather than the Azure.Core client patterns checked by these rules.
+nowarn:AZC0007 T:Azure.AI.Projects.Agents.AgentAdministrationClient
+nowarn:AZC0015 T:Azure.AI.Projects.Agents.AgentAdministrationClient
+
 # AAIP001 is this library's own [Experimental] marker for preview Foundry Agent
 # features (HostedAgentDefinition, WorkflowAgentDefinition, AgentToolboxes,
 # AgentSessionFiles, AgentOptimizationJobs, ProjectAgentSkills). The library's
@@ -29,3 +34,7 @@ nowarn:AAIP001 M:Azure.AI.Projects.Agents.ProjectsAgentVersion.#ctor(System.Coll
 nowarn:AAIP001 M:Azure.AI.Projects.Agents.ProjectsAgentVersion.JsonModelWriteCore(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)
 nowarn:AAIP001 M:Azure.AI.Projects.Agents.InternalCreateAgentRequest.#ctor(System.String,System.Nullable{Azure.AI.Projects.Agents.AgentState},System.Collections.Generic.IDictionary{System.String,System.String},System.String,Azure.AI.Projects.Agents.ProjectsAgentDefinition,Azure.AI.Projects.Agents.AgentBlueprintReference,System.Nullable{System.Boolean},Azure.AI.Projects.Agents.AgentEndpointConfiguration,Azure.AI.Projects.Agents.AgentCard,System.Collections.Generic.IDictionary{System.String,System.BinaryData})
 nowarn:AAIP001 M:Azure.AI.Projects.Agents.InternalCreateAgentRequest.JsonModelWriteCore(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)
+
+# Telemetry must identify the experimental workflow-agent shape when it is used.
+# Compiler experimental diagnostics do not support symbol-scoped suppression.
+nowarn:AAIP001

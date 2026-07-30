@@ -4,3 +4,8 @@
 # VoiceLiveResponse is established service terminology in the shipping API;
 # renaming it would be a breaking change.
 nowarn:AZC0030 T:Azure.AI.VoiceLive.VoiceLiveResponse
+
+# The websocket client cannot use the standard HTTP pipeline constructor or
+# Azure.Core response types; those patterns would misrepresent its transport.
+nowarn:AZC0007 T:Azure.AI.VoiceLive.VoiceLiveClient
+nowarn:AZC0015 T:Azure.AI.VoiceLive.VoiceLiveClient

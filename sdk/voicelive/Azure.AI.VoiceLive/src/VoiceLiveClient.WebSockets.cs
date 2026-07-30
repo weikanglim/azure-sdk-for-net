@@ -10,7 +10,7 @@ using Azure.Core.Pipeline;
 
 namespace Azure.AI.VoiceLive
 {
-#pragma warning disable AZC0015, AZC0107 // Client methods should return approved types
+#pragma warning disable AZC0107 // Client methods should return approved types
     public partial class VoiceLiveClient
     {
 #pragma warning disable AZC0004 // Websocket is an async only class

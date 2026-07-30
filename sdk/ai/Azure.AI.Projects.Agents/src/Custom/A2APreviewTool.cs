@@ -6,8 +6,6 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-#pragma warning disable OPENAI001
-
 namespace Azure.AI.Projects.Agents;
 
 [CodeGenType("A2APreviewTool")]

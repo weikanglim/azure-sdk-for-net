@@ -12,8 +12,6 @@ using OpenAI.Files;
 
 namespace Azure.AI.Extensions.OpenAI;
 
-#pragma warning disable CS0618
-
 internal static partial class PipelinePolicyHelpers
 {
     /// <summary>

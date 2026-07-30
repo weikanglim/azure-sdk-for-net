@@ -10,6 +10,19 @@
 # acknowledging it once at the assembly level matches intent.
 nowarn:OPENAI001
 
+# These clients intentionally use System.ClientModel credentials and response types.
+nowarn:AZC0007 T:Azure.AI.Extensions.OpenAI.ProjectConversationsClient
+nowarn:AZC0007 T:Azure.AI.Extensions.OpenAI.ProjectOpenAIClient
+nowarn:AZC0007 T:Azure.AI.Extensions.OpenAI.ProjectResponsesClient
+nowarn:AZC0015 T:Azure.AI.Extensions.OpenAI.ProjectConversationsClient
+nowarn:AZC0015 T:Azure.AI.Extensions.OpenAI.ProjectResponsesClient
+
+# Responses is established OpenAI service terminology.
+nowarn:AZC0012 T:Azure.AI.Extensions.OpenAI.Responses
+
+# Compatibility policy creation must call the obsolete upstream overload.
+nowarn:CS0618 T:Azure.AI.Extensions.OpenAI.PipelinePolicyHelpers
+
 # Point suppressions for AAIP001 warnings
 nowarn:AAIP001 M:Azure.AI.Extensions.OpenAI.AgentResponseItem.DeserializeAgentResponseItem(System.Text.Json.JsonElement,System.ClientModel.Primitives.ModelReaderWriterOptions)
 nowarn:AAIP001 M:Azure.AI.Extensions.OpenAI.ResponsesTool.DeserializeResponsesTool(System.Text.Json.JsonElement,System.ClientModel.Primitives.ModelReaderWriterOptions)

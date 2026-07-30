@@ -9,8 +9,6 @@ using System.Diagnostics.CodeAnalysis;
 using OpenAI;
 using OpenAI.Responses;
 
-#pragma warning disable OPENAI001
-
 namespace Azure.AI.Projects.Agents;
 
 [CodeGenType("Tool")]

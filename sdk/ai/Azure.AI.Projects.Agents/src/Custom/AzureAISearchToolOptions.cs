@@ -5,8 +5,6 @@
 
 using System.Collections.Generic;
 
-#pragma warning disable OPENAI001
-
 namespace Azure.AI.Projects.Agents;
 
 [CodeGenType("AzureAISearchToolResource")]

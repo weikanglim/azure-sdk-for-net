@@ -3,8 +3,6 @@
 
 #nullable disable
 
-#pragma warning disable OPENAI001
-
 using System;
 using System.Collections.Generic;
 using System.Text.Json;

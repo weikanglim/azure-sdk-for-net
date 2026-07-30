@@ -3,7 +3,6 @@
 using OpenAI.Responses;
 
 #nullable disable
-#pragma warning disable OPENAI001
 #pragma warning disable SCME0001
 
 namespace Azure.AI.Projects.Agents;
