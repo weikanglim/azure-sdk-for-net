@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 using System;
-using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using System.Threading.Tasks;
 using Azure.Core.Pipeline;
@@ -71,10 +70,6 @@ namespace Azure.IoT.ModelsRepository
         /// <param name="dtmi">A well-formed DTDL model Id. For example 'dtmi:com:example:Thermostat;1'.</param>
         /// <param name="dependencyResolution">A ModelDependencyResolution value to control model resolution behavior.</param>
         /// <param name="cancellationToken">The cancellationToken.</param>
-        [SuppressMessage(
-            "Usage",
-            "AZC0015:Unexpected client method return type.",
-            Justification = "Item lookup is optimized with a dictionary type, we do not expect any more than ~20 items to be returned.")]
         public virtual async Task<ModelResult> GetModelAsync(
             string dtmi, ModelDependencyResolution dependencyResolution = ModelDependencyResolution.Enabled, CancellationToken cancellationToken = default)
         {
@@ -101,10 +96,6 @@ namespace Azure.IoT.ModelsRepository
         /// <param name="dtmi">A well-formed DTDL model Id. For example 'dtmi:com:example:Thermostat;1'.</param>
         /// <param name="dependencyResolution">A ModelDependencyResolution value to control model resolution behavior.</param>
         /// <param name="cancellationToken">The cancellationToken.</param>
-        [SuppressMessage(
-            "Usage",
-            "AZC0015:Unexpected client method return type.",
-            Justification = "Item lookup is optimized with a dictionary type, we do not expect any more than ~20 items to be returned.")]
         public virtual ModelResult GetModel(
             string dtmi, ModelDependencyResolution dependencyResolution = ModelDependencyResolution.Enabled, CancellationToken cancellationToken = default)
         {

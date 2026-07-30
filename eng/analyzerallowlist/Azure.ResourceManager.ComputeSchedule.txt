@@ -1,0 +1,12 @@
+# Azure.ResourceManager.ComputeSchedule approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# Scheduled Actions uses these established names for operation response models.
+nowarn:AZC0030 T:Azure.ResourceManager.ComputeSchedule.Models.HibernateResourceOperationResponse
+nowarn:AZC0030 T:Azure.ResourceManager.ComputeSchedule.Models.CancelOperationsResponse
+nowarn:AZC0030 T:Azure.ResourceManager.ComputeSchedule.Models.DeallocateResourceOperationResponse
+nowarn:AZC0030 T:Azure.ResourceManager.ComputeSchedule.Models.StartResourceOperationResponse
+nowarn:AZC0030 T:Azure.ResourceManager.ComputeSchedule.Models.GetOperationStatusResponse
+nowarn:AZC0030 T:Azure.ResourceManager.ComputeSchedule.Models.GetOperationErrorsResponse
+# ExecutionParameters is the established domain name for optional schedule parameters.
+nowarn:AZC0030 T:Azure.ResourceManager.ComputeSchedule.Models.ExecutionParameters

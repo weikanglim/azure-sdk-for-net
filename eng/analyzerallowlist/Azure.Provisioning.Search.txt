@@ -1,0 +1,6 @@
+# Azure.Provisioning.Search approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These compatibility shim types intentionally reference their obsolete predecessor types.
+nowarn:CS0618 T:Azure.Provisioning.Search.SearchServiceProperties
+nowarn:CS0618 T:Azure.Provisioning.Search.SharedSearchServicePrivateLinkResourceProperties

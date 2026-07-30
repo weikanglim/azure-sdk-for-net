@@ -1,0 +1,6 @@
+# Azure.IoT.ModelsRepository approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# Model lookup returns a dictionary-backed ModelResult optimized for the small expected result set.
+nowarn:AZC0015 M:Azure.IoT.ModelsRepository.ModelsRepositoryClient.GetModelAsync(System.String,Azure.IoT.ModelsRepository.ModelDependencyResolution,System.Threading.CancellationToken)
+nowarn:AZC0015 M:Azure.IoT.ModelsRepository.ModelsRepositoryClient.GetModel(System.String,Azure.IoT.ModelsRepository.ModelDependencyResolution,System.Threading.CancellationToken)

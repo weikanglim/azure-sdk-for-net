@@ -1,0 +1,5 @@
+# Azure.Provisioning.KubernetesConfiguration approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# Kustomization is the Kubernetes domain term and is unlikely to collide with customer types.
+nowarn:AZC0012 T:Azure.Provisioning.KubernetesConfiguration.Kustomization

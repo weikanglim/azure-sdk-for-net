@@ -1,0 +1,5 @@
+# Azure.ResourceManager.Hci.Vm approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# The response model name comes directly from the shipped REST API specification.
+nowarn:AZC0030 T:Azure.ResourceManager.Hci.Vm.Models.VirtualHardDiskUploadResponse

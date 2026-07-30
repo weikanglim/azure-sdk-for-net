@@ -5,3 +5,6 @@
 # to hold a value of any type). Its broad name is by design and part of its established API, so
 # AZC0012 (single-word type name) is suppressed for it.
 nowarn:AZC0012 T:Azure.Variant
+
+# DynamicData intentionally exposes System.Text.Json adapters in this experimental package.
+nowarn:AZC0014 T:Azure.Core.Dynamic.DynamicData

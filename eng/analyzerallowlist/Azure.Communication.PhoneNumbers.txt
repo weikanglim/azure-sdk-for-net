@@ -1,0 +1,6 @@
+# Azure.Communication.PhoneNumbers approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These established names align with the same feature in the other Azure SDK languages.
+nowarn:AZC0030 T:Azure.Communication.PhoneNumbers.OperatorInformationOptions
+nowarn:AZC0030 T:Azure.Communication.PhoneNumbers.PhoneNumberBrowseCapabilitiesRequest
