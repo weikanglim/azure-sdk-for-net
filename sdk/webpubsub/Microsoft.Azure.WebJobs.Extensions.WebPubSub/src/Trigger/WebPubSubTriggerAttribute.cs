@@ -12,9 +12,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.WebPubSub
     /// Attribute used to bind a parameter to an Azure Web PubSub when a Web PubSub request is coming.
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
-#pragma warning disable CS0618 // Type or member is obsolete
     [Binding(TriggerHandlesReturnValue = true)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public class WebPubSubTriggerAttribute : Attribute
     {
         /// <summary>

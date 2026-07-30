@@ -12,9 +12,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.WebPubSubForSocketIO
     /// Attribute used to bind a parameter to an Web PubSub for Socket.IO when a request is coming.
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
-#pragma warning disable CS0618 // Type or member is obsolete
     [Binding(TriggerHandlesReturnValue = true)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public class SocketIOTriggerAttribute : Attribute
     {
         private const string ConnectEventName = "connect";

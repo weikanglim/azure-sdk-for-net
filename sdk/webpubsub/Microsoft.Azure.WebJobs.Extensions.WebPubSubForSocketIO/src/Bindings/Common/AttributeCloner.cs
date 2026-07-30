@@ -260,7 +260,6 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
                 validator(resolvedValue);
             }
 
-#pragma warning disable CS0618 // IResolutionPolicy is obsolete
             IResolutionPolicy policy = GetPolicy(attr.ResolutionPolicyType, propInfo);
             template.ValidateContractCompatibility(contract);
             return (newAttr, bindingData) => TemplateBind(policy, propInfo, newAttr, template, bindingData, validator);
@@ -402,7 +401,6 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
             // return the default policy
             return new DefaultResolutionPolicy();
         }
-#pragma warning restore CS0618 // Type or member is obsolete
 
         // If no name resolver is specified, then any %% becomes an error.
         private class EmptyNameResolver : INameResolver

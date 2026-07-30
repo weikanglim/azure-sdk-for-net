@@ -11,9 +11,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.SignalRService
     /// Attribute used to mark a function that should be triggered by messages sent from SignalR clients.
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
-#pragma warning disable CS0618 // Type or member is obsolete
     [Binding(TriggerHandlesReturnValue = true)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public class SignalRTriggerAttribute : Attribute
     {
         /// <summary>

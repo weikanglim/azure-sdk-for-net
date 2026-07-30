@@ -21,7 +21,6 @@ using BindingDataResolver = System.Func<System.Attribute, System.Collections.Gen
 
 using Validator = System.Action<object>;
 
-#pragma warning disable CS0618 // Type or member is obsolete
 #pragma warning disable CA1822 // Mark members as static
 namespace Microsoft.Azure.WebJobs.Extensions.SignalRService
 {
@@ -531,5 +530,3 @@ namespace Microsoft.Azure.WebJobs.Extensions.SignalRService
         }
     }
 }
-
-#pragma warning restore CS0618 // Type or member is obsolete

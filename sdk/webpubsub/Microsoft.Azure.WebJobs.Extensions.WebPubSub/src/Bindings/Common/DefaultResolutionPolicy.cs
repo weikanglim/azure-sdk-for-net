@@ -17,7 +17,6 @@ namespace Microsoft.Azure.WebJobs
     /// The default policy is just a direct substitution for the binding data.
     /// Derived policies can enforce formatting / escaping when they do injection.
     /// </summary>
-#pragma warning disable CS0618
     internal class DefaultResolutionPolicy : IResolutionPolicy
     {
         public string TemplateBind(PropertyInfo propInfo, Attribute attribute, BindingTemplate template, IReadOnlyDictionary<string, object> bindingData)
@@ -26,4 +25,3 @@ namespace Microsoft.Azure.WebJobs
         }
     }
 }
-#pragma warning restore CS0618

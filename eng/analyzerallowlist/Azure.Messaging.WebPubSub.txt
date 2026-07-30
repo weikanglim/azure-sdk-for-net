@@ -1,0 +1,3 @@
+# Azure.Messaging.WebPubSub approved analyzer suppressions.
+# Access-URI helpers intentionally return Uri rather than Response<T> because they perform no service request.
+nowarn:AZC0015 T:Azure.Messaging.WebPubSub.WebPubSubServiceClient

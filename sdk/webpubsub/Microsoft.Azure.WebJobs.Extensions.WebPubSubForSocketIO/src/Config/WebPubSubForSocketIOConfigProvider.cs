@@ -71,9 +71,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.WebPubSubForSocketIO
             Exception webhookException = null;
             try
             {
-#pragma warning disable CS0618 // Type or member is obsolete preview
                 var url = context.GetWebhookHandler();
-#pragma warning restore CS0618 // Type or member is obsolete preview
                 _logger.LogInformation($"Registered Web PubSub for Socket.IO negotiate Endpoint = {url?.GetLeftPart(UriPartial.Path)}");
             }
             catch (Exception ex)

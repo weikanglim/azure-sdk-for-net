@@ -8,7 +8,6 @@ namespace Microsoft.Azure.WebJobs.Extensions.SignalRService
     /// <summary>
     /// A class contains constant strings that represents different trigger event type.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "AZC0012:Avoid single word type names", Justification = "Breaking change")]
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class Event
     {

@@ -1,0 +1,6 @@
+# Microsoft.Azure.WebJobs.Extensions.WebPubSubForSocketIO approved analyzer suppressions.
+# The extension must implement obsolete WebJobs host contracts until its minimum host dependency removes them.
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.DefaultResolutionPolicy
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Host.Bindings.AttributeCloner`1
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.WebPubSubForSocketIO.WebPubSubForSocketIOConfigProvider
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.WebPubSubForSocketIO.SocketIOTriggerAttribute

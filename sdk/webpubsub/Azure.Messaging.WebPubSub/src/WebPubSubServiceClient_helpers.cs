@@ -38,10 +38,8 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="roles">Roles that the connection with the generated token will have.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual Uri GetClientAccessUri(DateTimeOffset expiresAt, string userId, IEnumerable<string> roles, CancellationToken cancellationToken)
-#pragma warning restore AZC0015 // Unexpected client method return type.
             => GetClientAccessUriInternal(expiresAt, userId, roles, null, WebPubSubClientProtocol.Default, async: false, cancellationToken).EnsureCompleted();
 
         /// <summary>
@@ -53,10 +51,8 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="roles">Roles that the connection with the generated token will have.</param>
         /// <param name="groups">Groups that the connection with the generated token will join when it connects.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual Uri GetClientAccessUri(DateTimeOffset expiresAt, string userId, IEnumerable<string> roles, IEnumerable<string> groups, CancellationToken cancellationToken)
-#pragma warning restore AZC0015 // Unexpected client method return type.
             => GetClientAccessUriInternal(expiresAt, userId, roles, groups, WebPubSubClientProtocol.Default, async: false, cancellationToken).EnsureCompleted();
 
         /// <summary>
@@ -69,9 +65,7 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="groups">Groups that the connection with the generated token will join when it connects.</param>
         /// <param name="clientProtocol">The client protocol.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Uri GetClientAccessUri(DateTimeOffset expiresAt, string userId = default, IEnumerable<string> roles = default, IEnumerable<string> groups = default, WebPubSubClientProtocol clientProtocol = default, CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
             => GetClientAccessUriInternal(expiresAt, userId, roles, groups, clientProtocol, async: false, cancellationToken).EnsureCompleted();
 
         /// <summary>
@@ -82,11 +76,9 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="roles">Roles that the connection with the generated token will have.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual async Task<Uri> GetClientAccessUriAsync(DateTimeOffset expiresAt, string userId, IEnumerable<string> roles, CancellationToken cancellationToken)
             => await GetClientAccessUriInternal(expiresAt, userId, roles, null, WebPubSubClientProtocol.Default, async: true, cancellationToken).ConfigureAwait(false);
-#pragma warning restore AZC0015 // Unexpected client method return type.
 
         /// <summary>
         /// Creates a URI with authentication token for the clients.
@@ -97,11 +89,9 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="roles">Roles that the connection with the generated token will have.</param>
         /// <param name="groups">Groups that the connection with the generated token will join when it connects.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual async Task<Uri> GetClientAccessUriAsync(DateTimeOffset expiresAt, string userId, IEnumerable<string> roles, IEnumerable<string> groups, CancellationToken cancellationToken)
             => await GetClientAccessUriInternal(expiresAt, userId, roles, groups, WebPubSubClientProtocol.Default, async: true, cancellationToken).ConfigureAwait(false);
-#pragma warning restore AZC0015 // Unexpected client method return type.
 
         /// <summary>
         /// Creates a URI with authentication token for the clients..
@@ -113,10 +103,8 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="groups">Groups that the connection with the generated token will join when it connects.</param>
         /// <param name="clientProtocol">The client protocol.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Uri> GetClientAccessUriAsync(DateTimeOffset expiresAt, string userId = default, IEnumerable<string> roles = default, IEnumerable<string> groups = default, WebPubSubClientProtocol clientProtocol = default, CancellationToken cancellationToken = default)
             => await GetClientAccessUriInternal(expiresAt, userId, roles, groups, clientProtocol, async: true, cancellationToken).ConfigureAwait(false);
-#pragma warning restore AZC0015 // Unexpected client method return type.
 
         /// <summary>
         /// Creates a URI with authentication token for the clients.
@@ -126,14 +114,12 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="roles">Roles that the connection with the generated token will have.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual Uri GetClientAccessUri(
             TimeSpan expiresAfter,
             string userId,
             IEnumerable<string> roles,
             CancellationToken cancellationToken)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             return GetClientAccessUriInternal(expiresAfter, userId, roles, null, WebPubSubClientProtocol.Default, false, cancellationToken).EnsureCompleted();
         }
@@ -147,7 +133,6 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="groups">Groups that the connection with the generated token will join when it connects.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual Uri GetClientAccessUri(
             TimeSpan expiresAfter,
@@ -155,7 +140,6 @@ namespace Azure.Messaging.WebPubSub
             IEnumerable<string> roles,
             IEnumerable<string> groups,
             CancellationToken cancellationToken)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             return GetClientAccessUriInternal(expiresAfter, userId, roles, groups, WebPubSubClientProtocol.Default, false, cancellationToken).EnsureCompleted();
         }
@@ -170,7 +154,6 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="clientProtocol">The client protocol.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Uri GetClientAccessUri(
             TimeSpan expiresAfter = default,
             string userId = default,
@@ -178,7 +161,6 @@ namespace Azure.Messaging.WebPubSub
             IEnumerable<string> groups = default,
             WebPubSubClientProtocol clientProtocol = default,
             CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             return GetClientAccessUriInternal(expiresAfter, userId, roles, groups, clientProtocol, false, cancellationToken).EnsureCompleted();
         }
@@ -191,14 +173,12 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="roles">Roles that the connection with the generated token will have.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual async Task<Uri> GetClientAccessUriAsync(
             TimeSpan expiresAfter,
             string userId,
             IEnumerable<string> roles,
             CancellationToken cancellationToken)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             return await GetClientAccessUriInternal(expiresAfter, userId, roles, null, WebPubSubClientProtocol.Default, true, cancellationToken).ConfigureAwait(false);
         }
@@ -212,7 +192,6 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="groups">Groups that the connection with the generated token will join when it connects.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [EditorBrowsable(EditorBrowsableState.Never)]
         public virtual async Task<Uri> GetClientAccessUriAsync(
             TimeSpan expiresAfter,
@@ -220,7 +199,6 @@ namespace Azure.Messaging.WebPubSub
             IEnumerable<string> roles,
             IEnumerable<string> groups,
             CancellationToken cancellationToken)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             return await GetClientAccessUriInternal(expiresAfter, userId, roles, groups, WebPubSubClientProtocol.Default, true, cancellationToken).ConfigureAwait(false);
         }
@@ -235,7 +213,6 @@ namespace Azure.Messaging.WebPubSub
         /// <param name="clientProtocol">The client protocol.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Uri> GetClientAccessUriAsync(
             TimeSpan expiresAfter = default,
             string userId = default,
@@ -243,7 +220,6 @@ namespace Azure.Messaging.WebPubSub
             IEnumerable<string> groups = default,
             WebPubSubClientProtocol clientProtocol = default,
             CancellationToken cancellationToken = default)
-#pragma warning restore AZC0015 // Unexpected client method return type.
         {
             return await GetClientAccessUriInternal(expiresAfter, userId, roles, groups, clientProtocol, true, cancellationToken).ConfigureAwait(false);
         }

@@ -1,0 +1,8 @@
+# Microsoft.Azure.WebJobs.Extensions.SignalRService approved analyzer suppressions.
+# These types must implement obsolete WebJobs host contracts until the extension can drop compatibility with them.
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.SignalRService.AttributeCloner`1
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.SignalRService.SignalRTriggerAttribute
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.SignalRService.SignalRFilterAttribute
+# The established single-word helper type names cannot be changed without breaking compatibility.
+nowarn:AZC0012 T:Microsoft.Azure.WebJobs.Extensions.SignalRService.Category
+nowarn:AZC0012 T:Microsoft.Azure.WebJobs.Extensions.SignalRService.Event

@@ -13,7 +13,6 @@ namespace Microsoft.Azure.WebJobs.Extensions.SignalRService
     /// A base attribute for filters that run before a SignalR trigger function is invoked.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
-#pragma warning disable CS0618 // Type or member is obsolete
     public abstract class SignalRFilterAttribute : FunctionInvocationFilterAttribute
     {
         /// <summary>
@@ -39,6 +38,4 @@ namespace Microsoft.Azure.WebJobs.Extensions.SignalRService
         /// </summary>
         public abstract Task FilterAsync(InvocationContext invocationContext, CancellationToken cancellationToken);
     }
-
-#pragma warning restore CS0618 // Type or member is obsolete
 }

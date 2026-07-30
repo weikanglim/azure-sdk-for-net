@@ -57,9 +57,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.WebPubSub
             Exception webhookException = null;
             try
             {
-#pragma warning disable CS0618 // Type or member is obsolete
                 var url = context.GetWebhookHandler();
-#pragma warning restore CS0618 // Type or member is obsolete
                 _logger.LogInformation($"Registered Web PubSub negotiate Endpoint = {url?.GetLeftPart(UriPartial.Path)}");
             }
             catch (Exception ex)
