@@ -1,0 +1,7 @@
+# Azure.AI.OpenAI approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# AzureOpenAIClient derives from the upstream System.ClientModel OpenAI client
+# and therefore intentionally provides constructors outside Azure.Core's client
+# constructor pattern.
+nowarn:AZC0007 T:Azure.AI.OpenAI.AzureOpenAIClient

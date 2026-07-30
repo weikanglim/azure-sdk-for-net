@@ -14,8 +14,6 @@ using Azure.AI.Projects.Agents;
 using Azure.AI.Projects.Evaluation;
 using Azure.AI.Projects.Memory;
 
-#pragma warning disable AZC0007
-
 namespace Azure.AI.Projects
 {
     // Data plane generated client.

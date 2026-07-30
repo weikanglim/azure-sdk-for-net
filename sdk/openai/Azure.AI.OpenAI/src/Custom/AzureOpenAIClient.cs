@@ -46,8 +46,6 @@ using OpenAI.Graders;
 using OpenAI.Videos;
 #endif
 
-#pragma warning disable AZC0007
-
 namespace Azure.AI.OpenAI;
 
 /// <summary>

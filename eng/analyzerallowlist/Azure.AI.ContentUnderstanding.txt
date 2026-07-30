@@ -1,0 +1,22 @@
+# Azure.AI.ContentUnderstanding approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These service-defined document model names intentionally align with the
+# predecessor Document Intelligence surface despite cross-package collisions.
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.CopyAuthorization
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentBarcode
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentBarcodeKind
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentCaption
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentFigure
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentFootnote
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentFormula
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentFormulaKind
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentLine
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentPage
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentParagraph
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentSection
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentTable
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentTableCell
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentTableCellKind
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.DocumentWord
+nowarn:AZC0034 T:Azure.AI.ContentUnderstanding.LengthUnit

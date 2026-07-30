@@ -1,6 +1,17 @@
 # Azure.AI.DocumentIntelligence approved analyzer suppressions.
 # See eng/analyzerallowlist/README.md for the file format and review policy.
 
+# These operation option names are established by the service and were approved
+# by the .NET architecture board despite AZC0030's model-suffix guidance.
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.AnalyzeBatchDocumentsOptions
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.AnalyzeDocumentOptions
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.AuthorizeClassifierCopyOptions
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.AuthorizeModelCopyOptions
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.BuildClassifierOptions
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.BuildDocumentModelOptions
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.ClassifyDocumentOptions
+nowarn:AZC0030 T:Azure.AI.DocumentIntelligence.ComposeModelOptions
+
 # These public model names intentionally mirror the predecessor
 # Azure.AI.FormRecognizer surface to keep migration source-compatible; the two
 # packages are never referenced together.

@@ -1,0 +1,14 @@
+# Azure.AI.Speech.Transcription approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# This System.ClientModel-based client intentionally uses its credential and
+# options types instead of the Azure.Core constructor pattern.
+nowarn:AZC0007 M:Azure.AI.Speech.Transcription.TranscriptionClient.#ctor(System.Uri,System.ClientModel.ApiKeyCredential)
+nowarn:AZC0007 M:Azure.AI.Speech.Transcription.TranscriptionClient.#ctor(System.Uri,System.ClientModel.AuthenticationTokenProvider)
+nowarn:AZC0007 M:Azure.AI.Speech.Transcription.TranscriptionClient.#ctor(System.Uri,System.ClientModel.ApiKeyCredential,Azure.AI.Speech.Transcription.TranscriptionClientOptions)
+nowarn:AZC0007 M:Azure.AI.Speech.Transcription.TranscriptionClient.#ctor(System.Uri,System.ClientModel.AuthenticationTokenProvider,Azure.AI.Speech.Transcription.TranscriptionClientOptions)
+
+# These operations intentionally return System.ClientModel ClientResult values
+# rather than Azure.Core Response values.
+nowarn:AZC0015 M:Azure.AI.Speech.Transcription.TranscriptionClient.TranscribeAsync(Azure.AI.Speech.Transcription.TranscriptionOptions,System.Threading.CancellationToken)
+nowarn:AZC0015 M:Azure.AI.Speech.Transcription.TranscriptionClient.Transcribe(Azure.AI.Speech.Transcription.TranscriptionOptions,System.Threading.CancellationToken)

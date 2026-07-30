@@ -1,6 +1,24 @@
 # Azure.AI.Projects approved analyzer suppressions.
 # See eng/analyzerallowlist/README.md for the file format and review policy.
 
+# These service-defined resource and collection names intentionally preserve
+# the concise Projects API terminology rather than adding model suffixes.
+nowarn:AZC0012 T:Azure.AI.Projects.Evaluators
+nowarn:AZC0012 T:Azure.AI.Projects.Insight
+nowarn:AZC0012 T:Azure.AI.Projects.Insights
+nowarn:AZC0012 T:Azure.AI.Projects.Schedule
+nowarn:AZC0012 T:Azure.AI.Projects.Schedules
+nowarn:AZC0012 T:Azure.AI.Projects.Target
+nowarn:AZC0012 T:Azure.AI.Projects.Trigger
+
+# AIProjectClient is built on System.ClientModel and intentionally follows that
+# stack's constructor and credential conventions rather than Azure.Core's.
+nowarn:AZC0007 T:Azure.AI.Projects.AIProjectClient
+
+# This compatibility helper bridges the legacy Azure.Core pipeline and the
+# System.ClientModel/OpenAI pipeline, requiring the obsolete adapter APIs.
+nowarn:CS0618 T:Azure.AI.Projects.PipelinePolicyHelpers
+
 # AAIP001 is the [Experimental] marker for this library's own preview surface
 # (memory stores, evaluations, red teams, etc.). The library intentionally calls
 # its own experimental APIs from both hand-written customizations and generated
