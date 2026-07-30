@@ -198,9 +198,7 @@ namespace Azure.Core.Http.Multipart
                     }
                 });
 #else
-#pragma warning disable CS0618
                 var sb = new InplaceStringBuilder(length);
-#pragma warning restore CS0618
                 var hasAdded = false;
                 // Skip null and empty values
                 for (var i = 0; i < values.Length; i++)

@@ -1,0 +1,11 @@
+# Azure.Storage.Blobs approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# OpenWrite intentionally returns a writable Stream, and the obsolete V1 encryption path remains
+# supported for compatibility with blobs encrypted by earlier client versions.
+nowarn:AZC0015 T:Azure.Storage.Blobs.BlobClient
+nowarn:AZC0015 T:Azure.Storage.Blobs.Specialized.BlobBaseClient
+nowarn:AZC0015 T:Azure.Storage.Blobs.Specialized.AppendBlobClient
+nowarn:AZC0015 T:Azure.Storage.Blobs.Specialized.BlockBlobClient
+nowarn:AZC0015 T:Azure.Storage.Blobs.Specialized.PageBlobClient
+nowarn:CS0618 T:Azure.Storage.Blobs.BlobClientSideDecryptor

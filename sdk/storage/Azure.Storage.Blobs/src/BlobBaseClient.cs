@@ -3084,9 +3084,7 @@ namespace Azure.Storage.Blobs.Specialized
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             BlobOpenReadOptions options,
             CancellationToken cancellationToken = default)
             => OpenReadInternal(
@@ -3119,9 +3117,7 @@ namespace Azure.Storage.Blobs.Specialized
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             BlobOpenReadOptions options,
             CancellationToken cancellationToken = default)
             => await OpenReadInternal(
@@ -3164,9 +3160,7 @@ namespace Azure.Storage.Blobs.Specialized
         /// containing each failure instance.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             long position = 0,
             int? bufferSize = default,
             BlobRequestConditions conditions = default,
@@ -3210,9 +3204,7 @@ namespace Azure.Storage.Blobs.Specialized
         /// containing each failure instance.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenRead(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool allowBlobModifications,
             long position = 0,
             int? bufferSize = default,
@@ -3257,9 +3249,7 @@ namespace Azure.Storage.Blobs.Specialized
         /// containing each failure instance.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             long position = 0,
             int? bufferSize = default,
             BlobRequestConditions conditions = default,
@@ -3303,9 +3293,7 @@ namespace Azure.Storage.Blobs.Specialized
         /// containing each failure instance.
         /// </remarks>
         [EditorBrowsable(EditorBrowsableState.Never)]
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenReadAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool allowBlobModifications,
             long position = 0,
             int? bufferSize = default,

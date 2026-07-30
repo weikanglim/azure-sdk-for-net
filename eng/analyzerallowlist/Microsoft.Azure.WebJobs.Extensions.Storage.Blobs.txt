@@ -7,3 +7,9 @@
 # <inheritdoc/> comments and emits IDT002. Using <inheritdoc/> is the correct intent here, so
 # IDT002 is approved for the whole project.
 nowarn:IDT002
+
+# These integration points must continue using obsolete WebJobs host contracts until the host
+# removes the corresponding load-balancer and fluent-binding APIs.
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.Storage.Blobs.Config.BlobsExtensionConfigProvider
+nowarn:CS0618 T:Microsoft.Extensions.Hosting.StorageBlobsWebJobsBuilderExtensions
+nowarn:CS0618 T:Microsoft.Azure.WebJobs.Extensions.Storage.Blobs.StorageLoadBalancerQueue

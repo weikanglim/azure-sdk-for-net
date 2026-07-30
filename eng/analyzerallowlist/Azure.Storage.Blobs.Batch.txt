@@ -10,3 +10,6 @@ nowarn:AZC0034 T:Azure.Storage.Blobs.Specialized.SpecializedBlobExtensions
 # Blob batch operations intentionally expose specialized aggregate results
 # rather than the standard HTTP client return shapes.
 nowarn:AZC0015
+
+# The netstandard compatibility implementation uses the framework's obsolete in-place builder.
+nowarn:CS0618 T:Azure.Core.Http.Multipart.StringValues

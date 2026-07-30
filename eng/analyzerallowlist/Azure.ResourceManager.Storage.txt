@@ -1,0 +1,6 @@
+# Azure.ResourceManager.Storage approved analyzer suppressions.
+# See eng/analyzerallowlist/README.md for the file format and review policy.
+
+# These obsolete extension overloads delegate to obsolete mockable compatibility members so
+# existing callers retain their original behavior.
+nowarn:CS0618 T:Azure.ResourceManager.Storage.StorageExtensions

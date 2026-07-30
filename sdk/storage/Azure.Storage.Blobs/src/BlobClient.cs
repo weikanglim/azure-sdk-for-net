@@ -1822,10 +1822,8 @@ namespace Azure.Storage.Blobs
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [ForwardsClientCalls]
         public virtual Stream OpenWrite(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             BlobOpenWriteOptions options = default,
             CancellationToken cancellationToken = default)
@@ -1859,10 +1857,8 @@ namespace Azure.Storage.Blobs
         /// If multiple failures occur, an <see cref="AggregateException"/> will be thrown,
         /// containing each failure instance.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         [ForwardsClientCalls]
         public virtual async Task<Stream> OpenWriteAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             BlobOpenWriteOptions options = default,
             CancellationToken cancellationToken = default)

@@ -96,9 +96,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.Storage.Blobs.Config
 
         private void InitializeBlobBindings(ExtensionConfigContext context)
         {
-#pragma warning disable CS0618 // Type or member is obsolete
             Uri url = context.GetWebhookHandler();
-#pragma warning restore CS0618 // Type or member is obsolete
             _logger.LogInformation($"registered http endpoint = {url?.GetLeftPart(UriPartial.Path)}");
 
             var rule = context.AddBindingRule<BlobAttribute>();
@@ -155,9 +153,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.Storage.Blobs.Config
             rule.AddConverter<BlobBaseClient, ParameterBindingData>(ConvertToParameterBindingData);
         }
 
-#pragma warning disable CS0618 // Type or member is obsolete. FluentBindingRule is "Not ready for public consumption."
         private void RegisterCommonConverters<T>(FluentBindingRule<T> rule) where T : Attribute
-#pragma warning restore CS0618 // Type or member is obsolete
         {
             // Converter manager already has Stream-->Byte[],String,TextReader
             rule.AddConverter<BlobBaseClient, Stream>(ConvertToStreamAsync);

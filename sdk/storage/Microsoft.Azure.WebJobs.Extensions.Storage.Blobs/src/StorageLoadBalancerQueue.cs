@@ -22,9 +22,7 @@ using Newtonsoft.Json;
 namespace Microsoft.Azure.WebJobs.Extensions.Storage.Blobs
 {
     // $$$ Review APIs
-#pragma warning disable CS0618 // Type or member is obsolete
     internal class StorageLoadBalancerQueue : ILoadBalancerQueue
-#pragma warning restore CS0618 // Type or member is obsolete
     {
         // this shared queue listener doesn't have a corresponding function, so we use
         // this constant for the scale monitor

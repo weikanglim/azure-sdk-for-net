@@ -24,9 +24,7 @@ namespace Azure.ResourceManager.Storage
         [EditorBrowsable(EditorBrowsableState.Never)]
         public static AsyncPageable<DeletedAccountResource> GetDeletedAccountsAsync(this SubscriptionResource subscriptionResource, CancellationToken cancellationToken = default)
         {
-#pragma warning disable CS0618 // Obsolete member
             return GetMockableStorageSubscriptionResource(subscriptionResource).GetDeletedAccountsAsync(cancellationToken);
-#pragma warning restore CS0618
         }
 
         // Backward-compatible overload: Lists deleted accounts under the subscription.
@@ -38,9 +36,7 @@ namespace Azure.ResourceManager.Storage
         [EditorBrowsable(EditorBrowsableState.Never)]
         public static Pageable<DeletedAccountResource> GetDeletedAccounts(this SubscriptionResource subscriptionResource, CancellationToken cancellationToken = default)
         {
-#pragma warning disable CS0618 // Obsolete member
             return GetMockableStorageSubscriptionResource(subscriptionResource).GetDeletedAccounts(cancellationToken);
-#pragma warning restore CS0618
         }
     }
 }

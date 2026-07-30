@@ -1968,9 +1968,7 @@ namespace Azure.Storage.Blobs.Specialized
         ///
         /// During the disposal of the returned write stream, an exception may be thrown.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual Stream OpenWrite(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             AppendBlobOpenWriteOptions options = default,
             CancellationToken cancellationToken = default)
@@ -2005,9 +2003,7 @@ namespace Azure.Storage.Blobs.Specialized
         ///
         /// During the disposal of the returned write stream, an exception may be thrown.
         /// </remarks>
-#pragma warning disable AZC0015 // Unexpected client method return type.
         public virtual async Task<Stream> OpenWriteAsync(
-#pragma warning restore AZC0015 // Unexpected client method return type.
             bool overwrite,
             AppendBlobOpenWriteOptions options = default,
             CancellationToken cancellationToken = default)
