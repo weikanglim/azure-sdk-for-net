@@ -13,6 +13,7 @@ namespace Azure.SdkAnalyzers.Tests
         [TestCase("AZC0012")]
         [TestCase("AZC0014")]
         [TestCase("AZC0015")]
+        [TestCase("AZC0041")]
         [TestCase("AZC0030")]
         [TestCase("AZC0034")]
         [TestCase("AZC0035")]
@@ -96,15 +97,17 @@ namespace Azure.Test { public class TestClient { } }
             await Verifier.CreateAnalyzer(code).RunAsync();
         }
 
-        [TestCase("SuppressMessage")]
-        [TestCase("SuppressMessageAttribute")]
-        public async Task ReportsSuppressionAttribute(string attributeName)
+        [TestCase("SuppressMessage", "AZC0015")]
+        [TestCase("SuppressMessageAttribute", "AZC0015")]
+        [TestCase("SuppressMessage", "AZC0041")]
+        [TestCase("SuppressMessageAttribute", "AZC0041")]
+        public async Task ReportsSuppressionAttribute(string attributeName, string diagnosticId)
         {
             string code = $@"
 using System.Diagnostics.CodeAnalysis;
 namespace Azure.Test
 {{
-    [{attributeName}(""Usage"", {{|AZC0041:""AZC0015:Unexpected return type""|}}, Justification = ""Required"")]
+    [{attributeName}(""Usage"", {{|AZC0041:""{diagnosticId}:Unexpected return type""|}}, Justification = ""Required"")]
     public class TestClient {{ }}
 }}
 ";
