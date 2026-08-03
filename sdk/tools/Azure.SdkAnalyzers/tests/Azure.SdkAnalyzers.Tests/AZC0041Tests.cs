@@ -65,6 +65,18 @@ namespace Azure.Test { public class TestClient { } }
         }
 
         [Test]
+        public async Task ReportsSelfSuppressionBeforeGovernedSuppression()
+        {
+            string code = @"
+#pragma warning disable {|AZC0041:AZC0041|}
+#pragma warning disable {|AZC0041:AZC0007|}
+namespace Azure.Test { public class TestClient { } }
+";
+
+            await Verifier.CreateAnalyzer(code).RunAsync();
+        }
+
+        [Test]
         public async Task DoesNotReportUngovernedPragma()
         {
             string code = @"
