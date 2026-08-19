@@ -185,3 +185,6 @@ tsp_client_metadata.yaml
 
 # Common toolchain intermediate files
 temp
+
+# Amp orb runtime files
+.amp/portals/
